@@ -1,0 +1,18 @@
+//because the default of chrome for the body of html document, which it has a 8/16 px margin, cleaning the marging is necessary
+* 
+    margin: 0px
+    padding: 0px
+
+.home-page
+    background-color: #F9F9FC
+    margin-left: 294px
+    height: 900px
+    z-index: 1
+    display: flex
+    justify-items: stretch
+    align-items: center
+    
+    .content
+        flex: 1//this element should be used with justify-items: strech to fill the content, because there have remaining content inside current box
+        text-align: center
+        padding: 0px 20px
