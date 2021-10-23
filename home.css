@@ -5,8 +5,8 @@
 
 .home-page {
   background-color: #F9F9FC;
-  margin-left: 294px;
-  height: 900px;
+  margin-left: 297px;
+  height: 940px;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23,5 +23,16 @@
           flex: 1;
   text-align: center;
   padding: 0px 20px;
+}
+
+.home-page .content .image-content ::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+  background-color: #e2e2e2;
+  border-radius: 100%;
 }
 /*# sourceMappingURL=home.css.map */
