@@ -50,6 +50,11 @@
   color: #ce6599;
 }
 
+.sideBar .menu .navInner .list-inner {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .sideBar .menu .navInner img {
   width: 19px;
   height: 19px;

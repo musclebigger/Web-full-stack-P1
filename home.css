@@ -38,8 +38,8 @@
 
 .home-page .content .frame .image-content {
   display: inline-block;
-  width: 240px;
-  height: 240px;
+  max-width: 240px;
+  height: auto;
   margin-top: 10px;
   border-radius: 100%;
 }

@@ -1,7 +1,7 @@
 .about-page 
     margin-left: 297px
-    padding: 100px 40px 150px 40px
-    height: 940px
+    padding: 100px 40px 0px 40px
+    height: 1000px
     z-index: 1
     display: flex
     flex-direction: column
@@ -18,12 +18,14 @@
     .content
         display: flex
         padding-top: 60px
+        align-items: flex-start
 
         .left-content
-            flex: 1
             margin-top: 20px
+            padding-right: 120px
 
             .introduction
+                padding-right: 100px
                 list-style: none
                 font-weight: 400
                 .brief-intro
@@ -33,7 +35,7 @@
                     span
                         font-weight: 600
 
-                b
+                p
                     font-family: "Poppins"
                     font-size: 18px
                     line-height: 30px
@@ -50,14 +52,13 @@
                     font-family: "poppins"
                     color: #1A1A1A
 
-
-        .right-content
-            flex: 1
-            padding-left: 120px
-            
-            .experience
-                bottom: -50px
-                left: -50px
-                z-index: 1
-                border-radius: 100%
-                background-color: #34495E
+            //change name to top 
+            .right-content
+                padding-left: 120px
+                
+                .experience
+                    bottom: -50px
+                    left: -50px
+                    z-index: 1
+                    border-radius: 100%
+                    background-color: #34495E

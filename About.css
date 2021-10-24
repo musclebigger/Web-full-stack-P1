@@ -1,7 +1,7 @@
 .about-page {
   margin-left: 297px;
-  padding: 100px 40px 150px 40px;
-  height: 940px;
+  padding: 100px 40px 0px 40px;
+  height: 1000px;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28,16 +28,18 @@
   display: -ms-flexbox;
   display: flex;
   padding-top: 60px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .about-page .content .left-content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   margin-top: 20px;
+  padding-right: 120px;
 }
 
 .about-page .content .left-content .introduction {
+  padding-right: 100px;
   list-style: none;
   font-weight: 400;
 }
@@ -51,7 +53,7 @@
   font-weight: 600;
 }
 
-.about-page .content .left-content .introduction b {
+.about-page .content .left-content .introduction p {
   font-family: "Poppins";
   font-size: 18px;
   line-height: 30px;
@@ -70,18 +72,15 @@
   color: #1A1A1A;
 }
 
-.about-page .content .right-content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.about-page .content .left-content .right-content {
   padding-left: 120px;
 }
 
-.about-page .content .right-content .experience {
+.about-page .content .left-content .right-content .experience {
   bottom: -50px;
   left: -50px;
   z-index: 1;
   border-radius: 100%;
   background-color: #34495E;
 }
-/*# sourceMappingURL=About.css.map */
+/*# sourceMappingURL=about.css.map */
