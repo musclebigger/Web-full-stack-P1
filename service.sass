@@ -1,31 +1,53 @@
 .service-page
     background-color: #F9F9FC
     margin-left: 297px
-    padding: 100px 40px 0px 40px
-    height: 940px
+    padding: 100px 40px 40px 40px
+    height: auto
     z-index: 1
     display: flex
     flex-direction: column
 
     .service-title
-        flex: 1
+        flex-grow: 1
+        margin-bottom: 40px
+        padding-left: 32px
 
     .service-list
-        flex: 1
+        flex-grow: 3
         display: flex
         flex-direction: row
         list-style-type: none
-        flex-wrap: wrap
-        align-items: center
-        min-height: 100vh
+        align-items: flex-start 
         background-color: #F9F9FC
+        margin-bottom: 0
 
         .service-content
-            width: 50%
-            margin: 0px 0px 30px 0px
-            padding-left: 30px
-            align-items: stretch
+            width: 25%
+            margin: 0px 30px 40px 0px
+            background-color: #fff
+            padding: 50px 40px 45px 50px
+            border-radius: 40px
             
+            .inner-list
+                text-align: center
+                .service-icon
+                    position: relative
+                    max-width: 30px
+                    max-height: 30px
+                    margin-bottom: 25px
+                .serivce-name
+                    margin-bottom: 20px
+                    line-height: 30px
+                    letter-spacing: 2px
+                .learn-more
+                    color: #7E7E7E
+                    font-size: 18px
+                    font-weight: 400
+                    line-height: 30px
+
+        .service-content:hover
+            background-color: #0a0a0a
+            color: #fbfbfb
     
 
 

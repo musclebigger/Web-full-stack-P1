@@ -21,6 +21,7 @@
   word-wrap: break-word;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  padding-left: 22px;
 }
 
 .about-page .content {
@@ -83,4 +84,4 @@
   border-radius: 100%;
   background-color: #34495E;
 }
-/*# sourceMappingURL=about.css.map */
+/*# sourceMappingURL=About.css.map */
