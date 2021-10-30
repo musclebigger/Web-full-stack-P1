@@ -1,0 +1,111 @@
+.contact-page {
+  background-color: #F9F9FC;
+  margin-left: 297px;
+  height: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Style the submit button with a specific background color etc */
+  /* When moving the mouse over the submit button, add a darker green color */
+}
+
+.contact-page .contact-page-container {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin: 100px 40px 40px 40px;
+}
+
+.contact-page .contact-page-container .contact-page-container-row {
+  margin: 40px 0px 40px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-page .contact-page-container .contact-page-container-row .contact-page-container-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.contact-page .contact-page-container .contact-page-container-row .contact-page-container-col .card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 25px;
+}
+
+.contact-page .contact-page-container .contact-page-container-row .contact-page-container-col .contact-input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 50px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.contact-page .contact-page-container .contact-page-container-row .contact-page-container-col .contact-input .bar {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 10px;
+}
+
+.contact-page .contact-page-container .contact-page-container-row .contact-page-container-col .contact-input .submit-bar {
+  margin: 10px;
+  width: 100px;
+}
+
+.contact-page .contact-page-container .contact-page-container-row .contact-page-container-col .position-map {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.contact-page input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-page input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.contact-page input[type=query] {
+  border: none;
+  border-bottom: 2px solid #c2c2c2;
+  outline: none;
+}
+/*# sourceMappingURL=contact.css.map */
