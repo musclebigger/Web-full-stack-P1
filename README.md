@@ -21,3 +21,12 @@ functions in building:
     2. animation for loding webpage (selective)
     3. color change for the whole page (selective)
     4. animtaion for picture(zoom up)
+
+Log2: 
+    problem identify: <a> tag cannot nest other tag without href
+    problem identify: JS, Try to manipulate display to none and use syntax:
+            document.getElementsByClassName("nav-icon").style.display = "none";
+    it dosen't work becasue the document.getElementsByClassName("nav-icon") return an array,
+    therefore, it should change to syntax:
+             var icon = document.getElementsByClassName("nav-icon");
+            for(var i=0;i<icon.length;i++){icon[i].style.display = "none";}

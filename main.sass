@@ -1,0 +1,440 @@
+//because the default of chrome for the body of html document, which it has a 8/16 px margin, cleaning the marging is necessary
+main
+    padding: 0px
+    margin-left: 297px
+    position: absolute
+    #nav-icon
+        display: none
+        z-index: 2
+    #responsive
+        display: none
+        font-size: 0%
+        z-index: 2
+//nav
+.sideBar
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    width: 297px
+    height: 100%
+    position: fixed
+    background-color: #fff
+    box-shadow: 3px 0px 5px #f5f5f5
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    z-index: 2//at the front of the page
+
+
+    .logo
+        border-bottom: 1px solid #CBD3D9
+        text-align: center
+        //in order to even the room in the flex box, flex-grow sometimes doesn't work because the flex-grow is to average the available space rather than spaces that Items have
+        flex: 1
+        #name
+            padding: 40px
+            margin: 0//there will have an auto margin in the box of name, which limit the size of name tag
+
+    .menu
+        flex: 5.5
+        display: inline
+        
+        .navInner
+            height: 384px
+            list-style: none
+            padding: 60px 40px 60px 40px
+            margin: 0
+            a:hover
+                color: #ce6599
+
+            .list-inner
+                padding-top: 10px
+                padding-bottom: 10px
+
+            img
+                width: 19px
+                height: 19px
+                position: relative
+                top: 3px
+                margin-right: 15px
+
+            li a
+                height: 30px
+                text-decoration: none
+                color: #1A1A1A
+                font-size: 14px
+                font-weight: 500
+                display: block
+                border-radius: 6px
+                padding: 9px 15px
+                position: relative
+                line-height: 30px//adjust the icon with word
+
+    .author
+        flex: 1
+        border-top: 1px solid #CBD3D9
+        .inner
+            display: flex
+            align-items: center
+            padding: 40px 55px
+            .image
+                position: relative
+                width: 50px
+                height: 50px
+                border-radius: 100%
+                display: inline-block
+            h3
+                display: inline //no default margin
+
+@media screen and (max-width: 600px)
+    main
+        margin-left: 0px
+        
+        #nav-icon
+            position: fixed
+            width: 100%
+            background-color: #474747
+            color: #ffffff
+            display: block
+            padding-left: 5px
+        
+    .sideBar 
+         display: none
+                
+//home
+.home-page
+    background-color: #F9F9FC
+    height: 940px
+    z-index: 1
+    display: flex
+    justify-items: stretch
+    align-items: center
+
+    .content
+        flex: 1//this element should be used with justify-items: strech to fill the content, because there have remaining content inside current box
+        text-align: center
+        padding: 0px 20px
+
+        .frame
+            display: inline-block
+            width: 260px
+            height: 260px
+            border-radius: 100%
+            position: relative
+            margin-bottom: 27px
+            background-color: #e2e2e2
+            border-radius: 100%
+            
+            
+            .image-content
+                display: inline-block
+                max-width: 240px//width 100% change, 22 line change as well
+                height: auto
+                margin-top: 10px//move down 10px in order to center the image
+                border-radius: 100%
+//about
+.about-page 
+    padding: 100px 40px 0px 40px
+    height: 1000px
+    z-index: 1
+    display: flex
+    flex-direction: column
+
+    .about-title
+            font-size: 60px
+            font-weight: 800
+            line-height: 1.5
+            font-family: "poppins"
+            color: #1A1A1A
+            word-wrap: break-word
+            box-sizing: border-box
+            padding-left: 22px//in line with the context in next column
+
+    .content
+        display: flex
+        padding-top: 60px
+        align-items: flex-start
+
+        .left-content
+            margin-top: 20px
+            padding-right: 120px
+
+            .introduction
+                padding-right: 100px
+                list-style: none
+                font-weight: 400
+                .brief-intro
+                    font-size: 22px
+                    margin-bottom: 20px
+    
+                    span
+                        font-weight: 600
+
+                p
+                    font-family: "Poppins"
+                    font-size: 18px
+                    line-height: 30px
+                    letter-spacing: 0px
+                    word-wrap: break-word
+                    color: #7e7e7e
+
+                .skill
+                    margin-bottom: 20px
+                    font-size: 22px
+                    font-weight: 600
+                    margin-top: 20px
+                    line-height: 1.5
+                    font-family: "poppins"
+                    color: #1A1A1A
+
+            //change name to top 
+            .right-content
+                padding-left: 120px
+                
+                .experience
+                    bottom: -50px
+                    left: -50px
+                    z-index: 1
+                    border-radius: 100%
+                    background-color: #34495E
+//service
+.service-page
+    background-color: #F9F9FC
+    padding: 100px 40px 40px 40px
+    height: auto
+    z-index: 1
+    display: flex
+    flex-direction: column
+
+    .service-title
+        flex-grow: 1
+        margin-bottom: 40px
+        padding-left: 32px
+
+    .service-list
+        flex-grow: 3
+        display: flex
+        flex-direction: row
+        list-style-type: none
+        align-items: flex-start 
+        background-color: #F9F9FC
+        margin-bottom: 0
+
+        .service-content
+            width: 25%
+            margin: 0px 30px 40px 0px
+            background-color: #fff
+            padding: 50px 40px 45px 50px
+            border-radius: 40px
+            
+            .inner-list
+                text-align: center
+                .service-icon
+                    position: relative
+                    max-width: 30px
+                    max-height: 30px
+                    margin-bottom: 25px
+                .serivce-name
+                    margin-bottom: 20px
+                    line-height: 30px
+                    letter-spacing: 2px
+                .learn-more
+                    color: #7E7E7E
+                    font-size: 18px
+                    font-weight: 400
+                    line-height: 30px
+
+        .service-content:hover
+            background-color: #0a0a0a
+            color: #fbfbfb
+//protofilo
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+.portfolio-page
+    padding: 100px 40px 40px 40px
+    height: auto
+    z-index: 1
+    display: flex
+    flex-direction: column
+
+    .portfolio-title
+        flex: 1
+        margin-bottom: 40px
+
+    .carousel-inner
+        //carousel container
+        width: 1280px
+        flex: 3
+        margin: 50px auto
+        min-height: 200px
+        position: relative
+        overflow: visible
+        
+        .portfolio-carousel-inner
+            overflow: hidden
+
+            .portfolio-list
+                //track
+                display: flex
+                flex-direction: row
+                list-style-type: none
+                // align-items: center 
+                margin-bottom: 0
+                padding-left: 0
+                transition: transform 0.3s
+                .portfolio-content
+                    //card-container
+                    width: 427px //calculate by carousel container, if it keeps three in screen, the 1280px is divided by 3
+                    height: 250px
+                    flex-shrink: 0 //adjust the box that card won't shrink when the content is filled, it is going to be visiable
+                    padding-right: 15px
+                    box-sizing: border-box
+
+                    .portfolio-inner-list
+                        //card
+                        width: 100%
+                        height: 100%
+                        border: 1px solid #ccc
+                        box-sizing: border-box
+
+    .carousel-nav button
+        width: 60px
+        height: 60px
+        border-radius: 50%
+        border: 1px solid #aaa
+        position: absolute
+        top: 120px
+        transform: translateY(-50%)
+
+            
+    .carousel-nav
+        .prev
+            left: -30px
+        .next
+            right: -20px    
+//Testminonial
+.testimonial-page
+    background-color: #F9F9FC
+    padding: 100px 40px 40px 40px
+    height: auto
+    z-index: 1
+    display: flex
+    flex-direction: column
+
+    .testimonial-title
+        flex: 1
+        margin-bottom: 40px
+
+    .testimonial-carousel
+        //carousel container
+        width: 1280px
+        flex: 3
+        margin: 50px auto
+        min-height: 200px
+        position: relative
+        overflow: visible
+        
+        .testimonial-carousel-inner
+            overflow: hidden
+
+            .testimonial-carousel-inner-list
+                //track
+                display: flex
+                flex-direction: row
+                list-style-type: none
+                // align-items: center 
+                margin-bottom: 0
+                padding-left: 0
+                transition: transform 0.3s
+                .testimonial-carousel-inner-list-content
+                    //card-container
+                    width: 640px //calculate by carousel container, if it keeps two in screen, the 1280px is divided by 3
+                    height: 250px
+                    flex-shrink: 0 //adjust the box that card won't shrink when the content is filled, it is going to be visiable
+                    padding-right: 15px
+                    box-sizing: border-box
+
+                    .testimonial-carousel-inner-list-content-card
+                        //card
+                        width: 100%
+                        height: 100%
+                        border: 1px solid #ccc
+                        box-sizing: border-box
+                        //card here
+    .testimonial-carousel-nav
+        display: block
+        text-align: center
+        margin-right: 8px
+
+    .testimonial-carousel-nav button:hover
+        background-color: #fff
+        border-color: #000000
+
+    .testimonial-carousel-nav button
+        width: 15px
+        height: 15px
+        border-radius: 50%
+        border: 1px solid #aaa
+        background-color: #888888
+//contact
+.contact-page
+    background-color: #F9F9FC
+    height: 1000px
+    display: flex
+    
+
+    .contact-page-container
+        list-style: none
+        display: flex
+        flex-direction: column
+        flex-grow: 1
+        align-items: stretch
+        margin: 100px 40px 40px 40px
+        .contact-page-container-row
+            margin: 40px 0px 40px 0px
+            display: flex
+            flex-direction: column
+        
+            .contact-page-container-col
+                display: flex
+                flex-direction: row
+
+                .card
+                    flex: 1
+                    margin-left: 25px
+
+                .contact-input
+                    flex: 1
+                    display: flex
+                    flex-direction: column
+                    margin-right: 50px
+                    align-items: stretch
+                    
+                    .bar
+                        flex: 1
+                        margin: 10px 
+                        
+                    .submit-bar
+                        margin: 10px
+                        width: 100px
+
+
+                .position-map
+                    flex: 1
+                    
+                
+        
+    /* Style the submit button with a specific background color etc */
+    input[type=submit]
+        background-color: #04AA6D
+        color: white
+        padding: 12px 20px
+        border: none
+        border-radius: 4px
+        cursor: pointer
+
+    /* When moving the mouse over the submit button, add a darker green color */
+    input[type=submit]:hover
+        background-color: #45a049
+
+    input[type=query]
+        border: none
+        border-bottom: 2px solid #c2c2c2
+        outline: none    
