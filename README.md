@@ -55,6 +55,8 @@ functions in building:
             1. The element in the sidebar can be keep the color after cliking it
             2. hamburger bar's content should be polished 
             3. social media icons for first page
+            4. carousel for shrinked page
+            5. moving arrow when hover is passde by in service page
 
 waiting problems:
 

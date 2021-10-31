@@ -89,6 +89,10 @@ main #responsive {
   display: flex;
   padding-top: 10px;
   padding-bottom: 10px;
+  border-radius: 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin: 5px;
 }
 
 .sideBar .menu .navInner .list-inner img {
@@ -99,13 +103,12 @@ main #responsive {
 
 .sideBar .menu .navInner .list-inner a {
   text-decoration: none;
-  color: #1A1A1A;
+  color: #777;
+  font-weight: bold;
   font-size: 14px;
-  font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 6px;
   padding: 9px 15px;
 }
 
@@ -390,6 +393,8 @@ main #responsive {
   background-color: #fff;
   padding: 50px 40px 45px 50px;
   border-radius: 40px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .service-page .service-list .service-content .inner-list {
