@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,9 +37,7 @@
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="main.css">
-
 </head>
-
 <body>
     <nav class="sideBar">
         <label class="logo">
@@ -52,45 +49,45 @@
             <ul class="navInner" id="myTopnav">
                 <li class="list-inner">
                     <a href="#home">
-                        <img src="imgs\nav-img\home.png" alt="side-icon" height="20" width="20">
+                        <img src="imgs\nav-img\home.png" alt="side-icon">
                         Home
                     </a>
                 </li>
                 <li class="list-inner">
                     <a href="#about">
-                        <img src="imgs\nav-img\About.png" alt="side-icon" height="20" width="20">
+                        <img src="imgs\nav-img\About.png" alt="side-icon" >
                         About
                     </a>
                 </li>
                 <li class="list-inner">
                     <a href="#service">
-                        <img src="imgs\nav-img\serivce.png" alt="side-icon" height="20" width="20">
+                        <img src="imgs\nav-img\serivce.png" alt="side-icon">
                         Service
                     </a>
                 </li>
                 <li class="list-inner">
                     <a href="#protfolio">
-                        <img src="imgs\nav-img\portfilo.png" alt="side-icon" height="20" width="20">
+                        <img src="imgs\nav-img\portfilo.png" alt="side-icon">
                         Protfilo
                     </a>
                 </li>
                 <li class="list-inner">
                     <a href="#testminonial">
-                        <img src="imgs\nav-img\testimonial.png" alt="side-icon" height="20" width="20">
+                        <img src="imgs\nav-img\testimonial.png" alt="side-icon">
                         Testminonial
                     </a>
 
                 </li>
                 <li class="list-inner">
                     <a href="#blog">
-                        <img src="imgs\nav-img\blog.png" alt="side-icon" height="20" width="20">
+                        <img src="imgs\nav-img\blog.png" alt="side-icon">
                         Blog
                     </a>
 
                 </li>
                 <li class="list-inner">
                     <a href="#contact">
-                        <img src="imgs\nav-img\contact.png" alt="side-icon" height="20" width="20">
+                        <img src="imgs\nav-img\contact.png" alt="side-icon">
                         Contact
                     </a>
                 </li>
@@ -108,7 +105,6 @@
             </div>
         </div>
     </nav>
-
     <main class="web-context">
         <a href="javascript:void(0);" id="nav-icon">
             <i class="fa fa-bars"></i>
@@ -129,7 +125,7 @@
             var w = screen.width;
             var count = 0;
             //adjust window it will disappear
-            if(w>600){
+            if (w > 600) {
                 r.style.display = "none";
             }
 
@@ -152,7 +148,7 @@
                     r.style.fontSize = "100%";
                     console.log(document.getElementById("responsive"));
                     count++
-                }else{
+                } else {
                     //click second time
                     r.style.display = "none";
                     count--;
@@ -175,7 +171,7 @@
         <div class="about-page" id="about">
             <h3 class="about-title">About Me</h3>
             <div class="content">
-                <div class="left-content">
+                <div class="top-content">
                     <ul class="introduction">
                         <li class="brief-intro">Hi, I'm <span>Rogers Nelson</span></li>
                         <li>
@@ -193,15 +189,13 @@
                         </li>
                     </ul>
                 </div>
-                <div class="right-content">
+                <div class="bottom-content">
                     <!-- <img style="height: 650px; width: 500px;" src="imgs\about\2.jpg"> -->
-                    <footer class="experience">
-                        <h3>6+ Years</h3>
-                        <span>Of experience</span>
-                    </footer>
+                    <div class="experience">
+                        <h3>6+ Years <span> Of experience</span></h3>
+                    </div>
                 </div>
             </div>
-
         </div>
         <!-- service -->
         <div class="service-page" id="service">
@@ -304,8 +298,6 @@
                 const track = document.querySelector('.portfolio-list');
                 const containerWidth = document.querySelector('.carousel-inner').offsetWidth;
                 // const dot1 = document.querySelector('.dot1');
-
-
                 next.addEventListener('click', () => {
                     track.style.transform = 'translateX(-' + containerWidth / 3 + 'px)';
                 })
@@ -376,13 +368,14 @@
         <div class="blog-page" id="blog">
             <style>
                 .blog-page {
-                    margin-left: 297px;
                     padding: 100px 40px 40px 40px;
                     height: auto;
                     z-index: 1;
                     display: flex;
+                    flex-direction: column;
                 }
             </style>
+            <h3>Blog</h3>
             <p>In building</p>
         </div>
         <!-- contact -->
@@ -431,11 +424,10 @@
                                 async>
                                 </script>
                         </div>
+                    </div>
                 </li>
             </ul>
         </div>
     </main>
-
 </body>
-
 </html>
