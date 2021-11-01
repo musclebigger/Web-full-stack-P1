@@ -1,13 +1,18 @@
-
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons')
 //because the default of chrome for the body of html document, which it has a 8/16 px margin, cleaning the marging is necessary
+*
+    margin-left: 0px
+    margin-top: 0px
+
 main
     padding: 0px
-    padding-left: 297px
+    margin-left: 320px
     position: absolute
     display: flex
     flex-direction: column
-    width: 100%
-    height: 5000px
+    width: 83.4%
+    height: 6000px
+    overflow: hidden
 
     #nav-icon
         display: none
@@ -17,67 +22,70 @@ main
         font-size: 0%
         z-index: 2
 //nav
+
 .sideBar
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-    width: 297px
+    width: 320px
     height: 100%
     position: fixed
     background-color: #fff
     box-shadow: 3px 0px 5px #f5f5f5
     display: flex
     flex-direction: column
-    justify-content: center
     z-index: 2//at the front of the page
+    transition: all 0.5s ease
 
     .logo
+        flex: 1
         border-bottom: 1px solid #CBD3D9
         text-align: center
-        //in order to even the room in the flex box, flex-grow sometimes doesn't work because the flex-grow is to average the available space rather than spaces that Items have
-        flex: 1
+            //in order to even the room in the flex box, flex-grow sometimes doesn't work because the flex-grow is to average the available space rather than spaces that Items have
+
         #name
             padding: 40px
             margin: 0//there will have an auto margin in the box of name, which limit the size of name tag
 
-    .menu
-        flex: 5.5
-        display: inline-block
+    .menu-frame
+        flex: 5
+        display: inline
 
         .navInner
             display: flex
             flex-direction: column
             list-style: none
             padding: 60px 40px 60px 40px
-            margin: 0
-            .list-inner:hover
-                background-color: #777
 
             .list-inner
+                height: auto
                 display: flex
-                padding-top: 10px
-                padding-bottom: 10px
-                border-radius: 25px
+                flex-direction: column
+                border-radius: 6px
+                background: linear-gradient(to left, #fff 50%, #F9F9FC 50%) right
+                background-size: 200%
                 transition: 0.3s
-                margin: 5px
-                
-                img
-                    width: 19px
-                    height: 19px
-                    margin-right: 10px
-                a
+                padding: 9px 15px 9px 15px
+                margin-bottom: 8px
+
+                .element
                     text-decoration: none
-                    color: #777
-                    font-weight: bold
-                    font-size: 14px
                     display: flex
-                    padding: 9px 15px
-                a:hover
-                    color: #fffeff
-                    
-                
+                    align-items: center
+                    color: #616060
+                    font-size: 14px
+                    font-weight: 600
+                    border-radius: 6px
+                    transition: 0.3s
+                    .material-icons
+                        margin-right: 15px
+                    p
+                        margin: 0px
+
+            .list-inner:hover
+                background-position: left
 
     .author
-        flex: 1
         border-top: 1px solid #CBD3D9
+        flex: 1
         .inner
             display: flex
             align-items: center
@@ -93,7 +101,8 @@ main
 
 @media screen and (max-width: 810px)
     main
-        padding-left: 0px
+        margin-left: 0px
+        width: 100%
 
         #nav-icon
             position: fixed
@@ -115,7 +124,7 @@ main
 //home
 .home-page
     background-color: #F9F9FC
-    flex: 2.2
+    height: 16%
     z-index: 1
     display: flex
     justify-items: stretch
@@ -145,24 +154,14 @@ main
 //about
 .about-page
     padding: 100px 40px 40px 40px
-    flex: 2
+    height: 14%
     z-index: 1
-    display: inline-block
-
-    .about-title
-        font-size: 60px
-        font-weight: 800
-        line-height: 1.5
-        font-family: "poppins"
-        color: #1A1A1A
-        word-wrap: break-word
-        box-sizing: border-box
-        padding-left: 22px//in line with the context in next column
+    display: flex
+    flex-direction: column
 
     .content
         display: flex
-        padding-top: 60px
-        padding-left: 60px
+        padding: 60px 60px 0px 0px
         flex-direction: row
         flex-wrap: wrap
         height: 80%
@@ -171,7 +170,14 @@ main
             width: 50%
             margin-top: 20px
 
+            .about-title
+                padding-left: 40px
+                font-size: 60px
+                font-weight: bolder
+                color: #1A1A1A
+
             .introduction
+                padding-right: 200px
                 list-style: none
                 font-weight: 400
                 display: flex
@@ -227,81 +233,108 @@ main
                 h3
                     display: flex
                     flex-wrap: wrap
-                    padding-left: 25px 
+                    padding-left: 25px
                     flex-direction: column
                     font-size: 35px
                     span
                         font-size: 15px
-                        padding-left: 25px 
+                        padding-left: 25px
 //service
 .service-page
     background-color: #F9F9FC
     padding: 100px 40px 40px 40px
-    flex: 1
     z-index: 1
     display: flex
     flex-direction: column
+    height: 10%
 
     .service-title
-        
-        margin-bottom: 40px
-        padding-left: 32px
+        padding-left: 40px
+        display: flex
+        justify-items: flex-start
+        flex-direction: column
+        word-wrap: break-word
+
+        h3
+            font-size: 60px
+            font-weight: bolder
+            color: #1A1A1A
+        p
+            font-family: "Poppins"
+            font-size: 28px
+            line-height: 30px
+            letter-spacing: 0px
+            word-wrap: break-word
+            color: #7e7e7e
 
     .service-list
-        
+        flex-grow: 1
         display: flex
         flex-direction: row
         list-style-type: none
-        align-items: flex-start
         background-color: #F9F9FC
         margin-bottom: 0
         flex-wrap: wrap
+        justify-content: flex-start
+        padding-top: 40px
 
         .service-content
-            width: 343px //over 343px the content will move to bottom
-            margin: 0px 30px 40px 0px
+            flex-grow: 1
+            display: flex
+            flex-direction: column
+            padding: 40px 40px 40px 40px
             background-color: #fff
-            padding: 50px 40px 45px 50px
-            border-radius: 40px
+            margin: 40px 40px 40px 0px
+            border-radius: 4px
             transition: 0.4s
 
             .inner-list
-                text-align: center
-                .service-icon
-                    position: relative
-                    max-width: 30px
-                    max-height: 30px
-                    margin-bottom: 25px
+                height: 100%
+                display: flex
+                flex-direction: column
+                align-items: stretch
+                .material-icons
+                    color: #9cbcf8
+                    font-size: 70px
+                    height: 38%
                 .serivce-name
-                    margin-bottom: 20px
-                    line-height: 30px
-                    letter-spacing: 2px
+                    height: 38%
+                    word-wrap: break-word
                 .learn-more
                     color: #7E7E7E
-                    font-size: 18px
-                    font-weight: 400
-                    line-height: 30px
+                    font-size: 20px
+                    font-weight: 500
+                    text-decoration: none
 
         .service-content:hover
             background-color: #0a0a0a
             color: #fbfbfb
 //protofilo
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons')
+
 .portfolio-page
     padding: 100px 40px 40px 40px
-    flex: 1
+    flex: 2
     z-index: 1
     display: flex
     flex-direction: column
 
     .portfolio-title
-        flex: 1
-        margin-bottom: 40px
+        padding-left: 40px
+        h3
+            font-size: 60px
+            font-weight: bolder
+            color: #1A1A1A
+        p
+            font-family: "Poppins"
+            font-size: 28px
+            line-height: 30px
+            letter-spacing: 0px
+            word-wrap: break-word
+            color: #7e7e7e
 
     .carousel-inner
         //carousel container
         width: 1280px
-        flex: 3
         margin: 50px auto
         min-height: 200px
         position: relative
@@ -352,14 +385,24 @@ main
 .testimonial-page
     background-color: #F9F9FC
     padding: 100px 40px 40px 40px
-    flex: 1
+    flex: 2
     z-index: 1
-    display: inline-block
-    width: 100%
+    display: flex
+    flex-direction: column
 
     .testimonial-title
-
-        margin-bottom: 40px
+        padding-left: 40px
+        h3
+            font-size: 60px
+            font-weight: bolder
+            color: #1A1A1A
+        p
+            font-family: "Poppins"
+            font-size: 28px
+            line-height: 30px
+            letter-spacing: 0px
+            word-wrap: break-word
+            color: #7e7e7e
 
     .testimonial-carousel
         //carousel container
@@ -412,10 +455,28 @@ main
         border-radius: 50%
         border: 1px solid #aaa
         background-color: #888888
+//blog
+.blog-page
+    padding: 100px 40px 40px 40px
+    height: 5%
+    z-index: 1
+    padding-left: 80px
+    h3
+        font-size: 60px
+        font-weight: bolder
+        color: #1A1A1A
+    p
+        font-family: "Poppins"
+        font-size: 28px
+        line-height: 30px
+        letter-spacing: 0px
+        word-wrap: break-word
+        color: #7e7e7e
+
 //contact
 .contact-page
     background-color: #F9F9FC
-    flex: 2
+    height: 16%
     display: flex
     flex-wrap: wrap
 

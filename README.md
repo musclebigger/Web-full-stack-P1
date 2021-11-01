@@ -34,6 +34,7 @@ problem identify:
             therefore, it should change to syntax:
              var icon = document.getElementsByClassName("nav-icon");
             for(var i=0;i《icon.length;i++){icon[i].style.display= "none";}
+            querySelector() insteads the getElementsByClassName if you choose the first class
 
 Last log fixed& finished functions:
 
@@ -44,6 +45,7 @@ Last log fixed& finished functions:
         5. About section needs to change the name of left/right to top/bottom in order to align with JS structure
         6. Space in the html document should be deleted
         7. Fixed the color of sidebar hover
+        8. Curosoul is finished for whole screen
 
 functions in building:
 
@@ -57,6 +59,7 @@ functions in building:
             3. social media icons for first page
             4. carousel for shrinked page
             5. moving arrow when hover is passde by in service page
+            6. send email function by clicking the sumbit button
 
 waiting problems:
 
@@ -64,3 +67,5 @@ waiting problems:
              * DEM naimg rule in the html tag class, which should be changed
 
 Problems need to be fixed which is pointed by tutor list 2.0:
+
+    Bug: The text for the sidebar is embeded into the menu. So, when i try to change the color for each element in the sidebar's nav by hover presudo, I have to use it two times to change the color of element as well as change the color of the text. But, the result is that there will have a delay of color change in terms of element and text when the mouse passes by.

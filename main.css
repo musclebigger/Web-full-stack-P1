@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+* {
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
 main {
   padding: 0px;
-  padding-left: 297px;
+  margin-left: 320px;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10,8 +15,9 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
-  height: 5000px;
+  width: 83.4%;
+  height: 6000px;
+  overflow: hidden;
 }
 
 main #nav-icon {
@@ -27,7 +33,7 @@ main #responsive {
 
 .sideBar {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  width: 297px;
+  width: 320px;
   height: 100%;
   position: fixed;
   background-color: #fff;
@@ -40,18 +46,17 @@ main #responsive {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   z-index: 2;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .sideBar .logo {
-  border-bottom: 1px solid #CBD3D9;
-  text-align: center;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  border-bottom: 1px solid #CBD3D9;
+  text-align: center;
 }
 
 .sideBar .logo #name {
@@ -59,14 +64,14 @@ main #responsive {
   margin: 0;
 }
 
-.sideBar .menu {
-  -webkit-box-flex: 5.5;
-      -ms-flex: 5.5;
-          flex: 5.5;
-  display: inline-block;
+.sideBar .menu-frame {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  display: inline;
 }
 
-.sideBar .menu .navInner {
+.sideBar .menu-frame .navInner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,51 +81,60 @@ main #responsive {
           flex-direction: column;
   list-style: none;
   padding: 60px 40px 60px 40px;
-  margin: 0;
 }
 
-.sideBar .menu .navInner .list-inner:hover {
-  background-color: #777;
-}
-
-.sideBar .menu .navInner .list-inner {
+.sideBar .menu-frame .navInner .list-inner {
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 25px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 6px;
+  background: -webkit-gradient(linear, right top, left top, color-stop(50%, #fff), color-stop(50%, #F9F9FC)) right;
+  background: linear-gradient(to left, #fff 50%, #F9F9FC 50%) right;
+  background-size: 200%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  margin: 5px;
+  padding: 9px 15px 9px 15px;
+  margin-bottom: 8px;
 }
 
-.sideBar .menu .navInner .list-inner img {
-  width: 19px;
-  height: 19px;
-  margin-right: 10px;
-}
-
-.sideBar .menu .navInner .list-inner a {
+.sideBar .menu-frame .navInner .list-inner .element {
   text-decoration: none;
-  color: #777;
-  font-weight: bold;
-  font-size: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 9px 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #616060;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.sideBar .menu .navInner .list-inner a:hover {
-  color: #fffeff;
+.sideBar .menu-frame .navInner .list-inner .element .material-icons {
+  margin-right: 15px;
+}
+
+.sideBar .menu-frame .navInner .list-inner .element p {
+  margin: 0px;
+}
+
+.sideBar .menu-frame .navInner .list-inner:hover {
+  background-position: left;
 }
 
 .sideBar .author {
+  border-top: 1px solid #CBD3D9;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  border-top: 1px solid #CBD3D9;
 }
 
 .sideBar .author .inner {
@@ -147,7 +161,8 @@ main #responsive {
 
 @media screen and (max-width: 810px) {
   main {
-    padding-left: 0px;
+    margin-left: 0px;
+    width: 100%;
   }
   main #nav-icon {
     position: fixed;
@@ -170,9 +185,7 @@ main #responsive {
 
 .home-page {
   background-color: #F9F9FC;
-  -webkit-box-flex: 2.2;
-      -ms-flex: 2.2;
-          flex: 2.2;
+  height: 16%;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -212,31 +225,22 @@ main #responsive {
 
 .about-page {
   padding: 100px 40px 40px 40px;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  height: 14%;
   z-index: 1;
-  display: inline-block;
-}
-
-.about-page .about-title {
-  font-size: 60px;
-  font-weight: 800;
-  line-height: 1.5;
-  font-family: "poppins";
-  color: #1A1A1A;
-  word-wrap: break-word;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding-left: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .about-page .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 60px;
-  padding-left: 60px;
+  padding: 60px 60px 0px 0px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -251,7 +255,15 @@ main #responsive {
   margin-top: 20px;
 }
 
+.about-page .content .top-content .about-title {
+  padding-left: 40px;
+  font-size: 60px;
+  font-weight: bolder;
+  color: #1A1A1A;
+}
+
 .about-page .content .top-content .introduction {
+  padding-right: 200px;
   list-style: none;
   font-weight: 400;
   display: -webkit-box;
@@ -351,9 +363,6 @@ main #responsive {
 .service-page {
   background-color: #F9F9FC;
   padding: 100px 40px 40px 40px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -362,14 +371,41 @@ main #responsive {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 10%;
 }
 
 .service-page .service-title {
-  margin-bottom: 40px;
-  padding-left: 32px;
+  padding-left: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  word-wrap: break-word;
+}
+
+.service-page .service-title h3 {
+  font-size: 60px;
+  font-weight: bolder;
+  color: #1A1A1A;
+}
+
+.service-page .service-title p {
+  font-family: "Poppins";
+  font-size: 28px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  word-wrap: break-word;
+  color: #7e7e7e;
 }
 
 .service-page .service-list {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -378,47 +414,65 @@ main #responsive {
       -ms-flex-direction: row;
           flex-direction: row;
   list-style-type: none;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   background-color: #F9F9FC;
   margin-bottom: 0;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-top: 40px;
 }
 
 .service-page .service-list .service-content {
-  width: 343px;
-  margin: 0px 30px 40px 0px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 40px 40px 40px 40px;
   background-color: #fff;
-  padding: 50px 40px 45px 50px;
-  border-radius: 40px;
+  margin: 40px 40px 40px 0px;
+  border-radius: 4px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 .service-page .service-list .service-content .inner-list {
-  text-align: center;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
-.service-page .service-list .service-content .inner-list .service-icon {
-  position: relative;
-  max-width: 30px;
-  max-height: 30px;
-  margin-bottom: 25px;
+.service-page .service-list .service-content .inner-list .material-icons {
+  color: #9cbcf8;
+  font-size: 70px;
+  height: 38%;
 }
 
 .service-page .service-list .service-content .inner-list .serivce-name {
-  margin-bottom: 20px;
-  line-height: 30px;
-  letter-spacing: 2px;
+  height: 38%;
+  word-wrap: break-word;
 }
 
 .service-page .service-list .service-content .inner-list .learn-more {
   color: #7E7E7E;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
 }
 
 .service-page .service-list .service-content:hover {
@@ -428,9 +482,9 @@ main #responsive {
 
 .portfolio-page {
   padding: 100px 40px 40px 40px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -442,17 +496,26 @@ main #responsive {
 }
 
 .portfolio-page .portfolio-title {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin-bottom: 40px;
+  padding-left: 40px;
+}
+
+.portfolio-page .portfolio-title h3 {
+  font-size: 60px;
+  font-weight: bolder;
+  color: #1A1A1A;
+}
+
+.portfolio-page .portfolio-title p {
+  font-family: "Poppins";
+  font-size: 28px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  word-wrap: break-word;
+  color: #7e7e7e;
 }
 
 .portfolio-page .carousel-inner {
   width: 1280px;
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
   margin: 50px auto;
   min-height: 200px;
   position: relative;
@@ -520,16 +583,36 @@ main #responsive {
 .testimonial-page {
   background-color: #F9F9FC;
   padding: 100px 40px 40px 40px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
   z-index: 1;
-  display: inline-block;
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .testimonial-page .testimonial-title {
-  margin-bottom: 40px;
+  padding-left: 40px;
+}
+
+.testimonial-page .testimonial-title h3 {
+  font-size: 60px;
+  font-weight: bolder;
+  color: #1A1A1A;
+}
+
+.testimonial-page .testimonial-title p {
+  font-family: "Poppins";
+  font-size: 28px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  word-wrap: break-word;
+  color: #7e7e7e;
 }
 
 .testimonial-page .testimonial-carousel {
@@ -598,11 +681,31 @@ main #responsive {
   background-color: #888888;
 }
 
+.blog-page {
+  padding: 100px 40px 40px 40px;
+  height: 5%;
+  z-index: 1;
+  padding-left: 80px;
+}
+
+.blog-page h3 {
+  font-size: 60px;
+  font-weight: bolder;
+  color: #1A1A1A;
+}
+
+.blog-page p {
+  font-family: "Poppins";
+  font-size: 28px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  word-wrap: break-word;
+  color: #7e7e7e;
+}
+
 .contact-page {
   background-color: #F9F9FC;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  height: 16%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
