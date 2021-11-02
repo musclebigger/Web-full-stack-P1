@@ -151,7 +151,6 @@ main
                 text-align: center
                 text-decoration: none
                 margin: 5px 2px
-                
 
             .fa-facebook
                 text-shadow: 2px 2px #000000
@@ -162,12 +161,12 @@ main
                 text-shadow: 2px 2px #000000
                 color: #c7c7c7
                 border: 1px 1px #777
-            
+
             .fa-twitter
                 text-shadow: 2px 2px #000000
                 color: #c7c7c7
                 border: 1px 1px #777
-            
+
             .fa-instagram
                 text-shadow: 2px 2px #000000
                 color: #c7c7c7
@@ -328,7 +327,7 @@ main
         background-color: #F9F9FC
         margin-bottom: 0
         flex-wrap: wrap
-        justify-content: flex-start
+        align-items: stretch
         padding-top: 40px
 
         .service-content
@@ -346,22 +345,84 @@ main
                 display: flex
                 flex-direction: column
                 align-items: stretch
+
                 .material-icons
                     color: #9cbcf8
                     font-size: 70px
                     height: 38%
-                .serivce-name
-                    height: 38%
-                    word-wrap: break-word
-                .learn-more
-                    color: #7E7E7E
-                    font-size: 20px
-                    font-weight: 500
-                    text-decoration: none
 
-        .service-content:hover
-            background-color: #0a0a0a
-            color: #fbfbfb
+                .serivce-name
+                    display: flex
+                    flex-direction: column
+                    height: 38%
+                    font-size: 30px
+                    h3
+                        margin: 0px
+
+                a
+                    margin-top: 20px
+
+                .learn-more
+                    text-decoration: none
+                    display: flex
+                    position: relative
+                    p
+                        display: flex
+                        color: #7E7E7E
+                        font-size: 20px
+                        font-weight: 500
+                    .learn-more-arrow
+                        content: ""
+                        width: 15px
+                        height: 2px
+                        background-color: #7E7E7E
+                        position: absolute
+                        left: 110px
+                        bottom: 30px 
+                        transition: width 0.4s
+                        
+                    .learn-more-arrow:after
+                        display: inline
+                        content: ""
+                        width: 8px
+                        height: 2px
+                        background-color: #7E7E7E
+                        transform: rotate(45deg)
+                        position: absolute
+                        left: 10px
+                        bottom: 3px
+                        transition: left 0.4s
+                    .learn-more-arrow:before
+                        display: inline
+                        content: ""
+                        width: 8px
+                        height: 2px
+                        background-color: #7E7E7E
+                        transform: rotate(-45deg)
+                        position: absolute
+                        left: 10px
+                        top: 3px
+                        transition: left 0.4s
+                        
+                    
+
+    .service-content:hover
+        background-color: #0a0a0a
+        color: #fbfbfb
+        .inner-list
+            .learn-more
+                p
+                    color: #fbfbfb
+                .learn-more-arrow
+                    background-color: #fbfbfb
+                    width: 40px
+                    //based on the width increment, 40-15
+                .learn-more-arrow:before
+                    background-color: #fbfbfb
+                    left: 35px//based on the width increment
+                .learn-more-arrow:after
+                    background-color: #fbfbfb
+                    left: 35px
 //protofilo
 
 .portfolio-page

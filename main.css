@@ -486,9 +486,9 @@ main #responsive {
   margin-bottom: 0;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   padding-top: 40px;
 }
 
@@ -532,20 +532,106 @@ main #responsive {
 }
 
 .service-page .service-list .service-content .inner-list .serivce-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 38%;
-  word-wrap: break-word;
+  font-size: 30px;
+}
+
+.service-page .service-list .service-content .inner-list .serivce-name h3 {
+  margin: 0px;
+}
+
+.service-page .service-list .service-content .inner-list a {
+  margin-top: 20px;
 }
 
 .service-page .service-list .service-content .inner-list .learn-more {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.service-page .service-list .service-content .inner-list .learn-more p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: #7E7E7E;
   font-size: 20px;
   font-weight: 500;
-  text-decoration: none;
 }
 
-.service-page .service-list .service-content:hover {
+.service-page .service-list .service-content .inner-list .learn-more .learn-more-arrow {
+  content: "";
+  width: 15px;
+  height: 2px;
+  background-color: #7E7E7E;
+  position: absolute;
+  left: 110px;
+  bottom: 30px;
+  -webkit-transition: width 0.4s;
+  transition: width 0.4s;
+}
+
+.service-page .service-list .service-content .inner-list .learn-more .learn-more-arrow:after {
+  display: inline;
+  content: "";
+  width: 8px;
+  height: 2px;
+  background-color: #7E7E7E;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  left: 10px;
+  bottom: 3px;
+  -webkit-transition: left 0.4s;
+  transition: left 0.4s;
+}
+
+.service-page .service-list .service-content .inner-list .learn-more .learn-more-arrow:before {
+  display: inline;
+  content: "";
+  width: 8px;
+  height: 2px;
+  background-color: #7E7E7E;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  position: absolute;
+  left: 10px;
+  top: 3px;
+  -webkit-transition: left 0.4s;
+  transition: left 0.4s;
+}
+
+.service-page .service-content:hover {
   background-color: #0a0a0a;
   color: #fbfbfb;
+}
+
+.service-page .service-content:hover .inner-list .learn-more p {
+  color: #fbfbfb;
+}
+
+.service-page .service-content:hover .inner-list .learn-more .learn-more-arrow {
+  background-color: #fbfbfb;
+  width: 40px;
+}
+
+.service-page .service-content:hover .inner-list .learn-more .learn-more-arrow:before {
+  background-color: #fbfbfb;
+  left: 35px;
+}
+
+.service-page .service-content:hover .inner-list .learn-more .learn-more-arrow:after {
+  background-color: #fbfbfb;
+  left: 35px;
 }
 
 .portfolio-page {
