@@ -98,6 +98,10 @@ main
                 display: inline-block
             h3
                 display: inline //no default margin
+            a
+                text-decoration: none
+                text-shadow: 0.5px 0.5px #6977f1
+                color: #6d93fa
 
 @media screen and (max-width: 810px)
     main
@@ -133,7 +137,56 @@ main
     .content
         flex: 1//this element should be used with justify-items: strech to fill the content, because there have remaining content inside current box
         text-align: center
+
         padding: 0px 20px
+
+        .social-media-frame
+            display: flex
+            justify-content: center
+            .fa
+                padding: 20px
+                font-size: 20px
+                width: 20px
+                height: 20px
+                text-align: center
+                text-decoration: none
+                margin: 5px 2px
+                
+
+            .fa-facebook
+                text-shadow: 2px 2px #000000
+                color: #c7c7c7
+                border: 1px 1px #777
+
+            .fa-linkedin
+                text-shadow: 2px 2px #000000
+                color: #c7c7c7
+                border: 1px 1px #777
+            
+            .fa-twitter
+                text-shadow: 2px 2px #000000
+                color: #c7c7c7
+                border: 1px 1px #777
+            
+            .fa-instagram
+                text-shadow: 2px 2px #000000
+                color: #c7c7c7
+                border: 1px 1px #777
+
+            .fa:hover
+                opacity: 0.7
+
+        h3
+            font-size: 60px
+            font-weight: bolder
+            color: #1A1A1A
+        p
+            font-family: "Poppins"
+            font-size: 24px
+            line-height: 30px
+            letter-spacing: 0px
+            word-wrap: break-word
+            color: #7e7e7e
 
         .frame
             display: inline-block
@@ -488,6 +541,19 @@ main
         flex-grow: 1
         align-items: stretch
         margin: 100px 40px 40px 40px
+        .contact-page-container-row-title
+            word-wrap: break-word
+            h3
+                font-size: 60px
+                font-weight: bolder
+                color: #1A1A1A
+            p
+                font-family: "Poppins"
+                font-size: 28px
+                line-height: 30px
+                letter-spacing: 0px
+                word-wrap: break-word
+                color: #7e7e7e
         .contact-page-container-row
             margin: 40px 0px 40px 0px
             display: flex

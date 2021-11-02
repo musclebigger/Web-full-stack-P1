@@ -159,6 +159,12 @@ main #responsive {
   display: inline;
 }
 
+.sideBar .author .inner a {
+  text-decoration: none;
+  text-shadow: 0.5px 0.5px #6977f1;
+  color: #6d93fa;
+}
+
 @media screen and (max-width: 810px) {
   main {
     margin-left: 0px;
@@ -202,6 +208,68 @@ main #responsive {
           flex: 1;
   text-align: center;
   padding: 0px 20px;
+}
+
+.home-page .content .social-media-frame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-page .content .social-media-frame .fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.home-page .content .social-media-frame .fa-facebook {
+  text-shadow: 2px 2px #000000;
+  color: #c7c7c7;
+  border: 1px 1px #777;
+}
+
+.home-page .content .social-media-frame .fa-linkedin {
+  text-shadow: 2px 2px #000000;
+  color: #c7c7c7;
+  border: 1px 1px #777;
+}
+
+.home-page .content .social-media-frame .fa-twitter {
+  text-shadow: 2px 2px #000000;
+  color: #c7c7c7;
+  border: 1px 1px #777;
+}
+
+.home-page .content .social-media-frame .fa-instagram {
+  text-shadow: 2px 2px #000000;
+  color: #c7c7c7;
+  border: 1px 1px #777;
+}
+
+.home-page .content .social-media-frame .fa:hover {
+  opacity: 0.7;
+}
+
+.home-page .content h3 {
+  font-size: 60px;
+  font-weight: bolder;
+  color: #1A1A1A;
+}
+
+.home-page .content p {
+  font-family: "Poppins";
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  word-wrap: break-word;
+  color: #7e7e7e;
 }
 
 .home-page .content .frame {
@@ -733,6 +801,25 @@ main #responsive {
       -ms-flex-align: stretch;
           align-items: stretch;
   margin: 100px 40px 40px 40px;
+}
+
+.contact-page .contact-page-container .contact-page-container-row-title {
+  word-wrap: break-word;
+}
+
+.contact-page .contact-page-container .contact-page-container-row-title h3 {
+  font-size: 60px;
+  font-weight: bolder;
+  color: #1A1A1A;
+}
+
+.contact-page .contact-page-container .contact-page-container-row-title p {
+  font-family: "Poppins";
+  font-size: 28px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  word-wrap: break-word;
+  color: #7e7e7e;
 }
 
 .contact-page .contact-page-container .contact-page-container-row {
