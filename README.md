@@ -69,3 +69,15 @@ waiting problems:
 Problems need to be fixed which is pointed by tutor list 2.0:
 
     Bug: The text for the sidebar is embeded into the menu. So, when i try to change the color for each element in the sidebar's nav by hover presudo, I have to use it two times to change the color of element as well as change the color of the text. But, the result is that there will have a delay of color change in terms of element and text when the mouse passes by.
+
+<h1>Log-3:</h1>
+
+porblem identified
+
+    growing arrow when hover should be built by drawing line by postion
+    The abosulte position is based on the current box
+
+function finished
+
+    social medial icons are added.
+    arrow fixed
