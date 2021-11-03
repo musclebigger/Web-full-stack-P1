@@ -313,7 +313,7 @@ main
             color: #1A1A1A
         p
             font-family: "Poppins"
-            font-size: 28px
+            font-size: 18px
             line-height: 30px
             letter-spacing: 0px
             word-wrap: break-word
@@ -378,9 +378,9 @@ main
                         background-color: #7E7E7E
                         position: absolute
                         left: 110px
-                        bottom: 30px 
+                        bottom: 30px
                         transition: width 0.4s
-                        
+
                     .learn-more-arrow:after
                         display: inline
                         content: ""
@@ -403,8 +403,6 @@ main
                         left: 10px
                         top: 3px
                         transition: left 0.4s
-                        
-                    
 
     .service-content:hover
         background-color: #0a0a0a
@@ -440,7 +438,7 @@ main
             color: #1A1A1A
         p
             font-family: "Poppins"
-            font-size: 28px
+            font-size: 18px
             line-height: 30px
             letter-spacing: 0px
             word-wrap: break-word
@@ -448,11 +446,13 @@ main
 
     .carousel-inner
         //carousel container
-        width: 1280px
+        width: 94%
         margin: 50px auto
-        min-height: 200px
+        min-height: 300px
         position: relative
         overflow: visible
+        margin-left: 0px
+        padding-left: 40px
 
         .portfolio-carousel-inner
             overflow: hidden
@@ -468,33 +468,65 @@ main
                 transition: transform 0.3s
                 .portfolio-content
                     //card-container
-                    width: 427px //calculate by carousel container, if it keeps three in screen, the 1280px is divided by 3
-                    height: 250px
+                    border-radius: 20px
+                    width: 33.5% //calculate by carousel container, if it keeps three in screen, the 1280px is divided by 3
+                    height: 500px
                     flex-shrink: 0 //adjust the box that card won't shrink when the content is filled, it is going to be visiable
-                    padding-right: 15px
+                    padding-right: 25px
                     box-sizing: border-box
 
                     .portfolio-inner-list
                         //card
-                        width: 100%
+                        width: 99%
                         height: 100%
-                        border: 1px solid #ccc
                         box-sizing: border-box
-
-    .carousel-nav button
-        width: 60px
-        height: 60px
-        border-radius: 50%
-        border: 1px solid #aaa
-        position: absolute
-        top: 120px
-        transform: translateY(-50%)
-
-    .carousel-nav
+                        border-radius: 10px
+                        display: flex
+                        flex-direction: column
+                        justify-items: stretch
+                        .img-frame
+                            border-radius: 20px
+                            overflow: hidden
+                            .portofolio-example
+                                width: 100%
+                                border-radius: 20px
+                                transition: 0.3s
+                            .portofolio-example:hover
+                                transform: scale(1.2)
+                        h3
+                            font-family: "Poppins"
+                            font-size: 20px
+                            margin-top: 15px
+                            margin-bottom: 15px
+                        p
+                        
+                            font-family: "Poppins"
+                            font-size: 16px
+                            color: #777
+    .carousel-nav 
+        opacity: 0.7
+        button
+            width: 80px
+            height: 80px
+            border-radius: 50%
+            border: 1px solid #aaa
+            position: absolute
         .prev
-            left: -30px
+            left: 5px
+            bottom: 260px
         .next
-            right: -20px
+            bottom: 260px
+            left: 97%
+                
+    .prev:hover
+        background-color: #292929
+        .material-icons
+            color: #fff
+    .next:hover
+        background-color: #292929
+        .material-icons
+            color: #fff
+    
 //Testminonial
 .testimonial-page
     background-color: #F9F9FC
