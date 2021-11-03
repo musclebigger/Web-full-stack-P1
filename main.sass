@@ -3,7 +3,7 @@
 *
     margin-left: 0px
     margin-top: 0px
-
+    font-family: "Poppins"
 main
     padding: 0px
     margin-left: 320px
@@ -262,16 +262,19 @@ main
 
             //change name to top 
         .bottom-content
-            background-color: #666
             margin-top: 20px
             width: 50%
+            height: 100%
             display: flex
             align-items: flex-end
             flex-direction: row
+            overflow: visible
+            border-radius: 20px
 
             .experience
                 display: flex
                 flex-wrap: wrap
+                margin-left: 50px
                 width: 200px
                 height: 200px
                 text-align: center
@@ -281,6 +284,7 @@ main
                 box-shadow: 10px #e9e9f1
                 color: #fff
                 align-items: center
+                position: absolute
 
                 h3
                     display: flex
@@ -291,6 +295,13 @@ main
                     span
                         font-size: 15px
                         padding-left: 25px
+            
+            img
+                height: 95%
+                width: 70%
+                margin-left: 150px
+                margin-bottom: 50px
+                border-radius: 10px
 //service
 .service-page
     background-color: #F9F9FC
@@ -544,7 +555,7 @@ main
             color: #1A1A1A
         p
             font-family: "Poppins"
-            font-size: 28px
+            font-size: 18px
             line-height: 30px
             letter-spacing: 0px
             word-wrap: break-word
@@ -552,12 +563,13 @@ main
 
     .testimonial-carousel
         //carousel container
-        width: 1280px
-
+        width: 92%
         margin: 50px auto
         min-height: 200px
         position: relative
         overflow: visible
+        margin-left: 35px
+        margin-right: 0px
 
         .testimonial-carousel-inner
             overflow: hidden
@@ -573,20 +585,56 @@ main
                 transition: transform 0.3s
                 .testimonial-carousel-inner-list-content
                     //card-container
-                    width: 640px //calculate by carousel container, if it keeps two in screen, the 1280px is divided by 2
-                    height: 250px
+                    width: 51% //calculate by carousel container, if it keeps two in screen, the 1280px is divided by 2
+                    height: 350px
                     flex-shrink: 0 //adjust the box that card won't shrink when the content is filled, it is going to be visiable
-                    padding-right: 15px
+                    padding-right: 30px
                     box-sizing: border-box
 
                     .testimonial-carousel-inner-list-content-card
                         //card
-                        width: 100%
+                        width: 96%
                         height: 100%
-                        border: 1px solid #ccc
+                        background-color: #fff
                         box-sizing: border-box
+                        display: flex
+                        flex-direction: column
+                        padding-right: 30px
                         //card here
+                        .testimonial-carousel-inner-list-content-card-inner
+                            display: flex 
+                            justify-content: stretch
+                            img
+                                width: 130px
+                                height: 130px
+                                margin-left: 50px
+                                margin-top: 50px
+                                border-radius: 10px
+                            .p-title
+                                display: flex
+                                flex-direction: column
+                                margin-left: 30px
+                                margin-top: 40px
+                                .p-name
+                                    font-size: 20px
+                                    font-weight: bold
+                                    color: #272727
+                                .p-intro
+                                    font-size: 15px
+                                    color: #7e7e7e
+                                    margin-top: 2px
+                            svg
+                                margin-left: 160px
+                                margin-top: 80px
+                        p
+                            margin-top: 30px
+                            word-wrap: break-word
+                            margin-left: 42px
+                            font-size: 18px
+                            color: #7e7e7e
+
     .testimonial-carousel-nav
+        margin-top: 40px
         display: block
         text-align: center
         margin-right: 8px
