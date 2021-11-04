@@ -8,25 +8,15 @@
 main {
   padding: 0px;
   margin-left: 320px;
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 83.4%;
-  height: 6000px;
-  overflow: hidden;
+  position: relative;
 }
 
-main #nav-icon {
+#nav-icon {
   display: none;
   z-index: 2;
 }
 
-main #responsive {
+#responsive {
   display: none;
   font-size: 0%;
   z-index: 2;
@@ -166,33 +156,30 @@ main #responsive {
   color: #6d93fa;
 }
 
+.navbar {
+  display: none;
+}
+
 @media screen and (max-width: 810px) {
-  main {
+  .web-context {
     margin-left: 0px;
-    width: 100%;
   }
-  main #nav-icon {
-    position: fixed;
-    width: 100%;
-    background-color: #474747;
-    color: #ffffff;
-    display: inline-block;
-    padding-left: 5px;
+  .navbar {
+    display: block;
   }
-  main .carousel-inner {
-    display: none;
-  }
-  main .testimonial-carousel {
-    display: none;
+}
+
+@media screen and (max-width: 810px) {
+  .top-content {
+    margin-right: 0px;
   }
   .sideBar {
     display: none;
   }
 }
 
-.home-page {
+.web-context .home-page {
   background-color: #F9F9FC;
-  height: 16%;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -201,9 +188,11 @@ main #responsive {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 40px;
+  min-height: 100vh;
 }
 
-.home-page .content {
+.web-context .home-page .content {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -211,7 +200,7 @@ main #responsive {
   padding: 0px 20px;
 }
 
-.home-page .content .social-media-frame {
+.web-context .home-page .content .social-media-frame {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -220,7 +209,7 @@ main #responsive {
           justify-content: center;
 }
 
-.home-page .content .social-media-frame .fa {
+.web-context .home-page .content .social-media-frame .fa {
   padding: 20px;
   font-size: 20px;
   width: 20px;
@@ -230,41 +219,41 @@ main #responsive {
   margin: 5px 2px;
 }
 
-.home-page .content .social-media-frame .fa-facebook {
+.web-context .home-page .content .social-media-frame .fa-facebook {
   text-shadow: 2px 2px #000000;
   color: #c7c7c7;
   border: 1px 1px #777;
 }
 
-.home-page .content .social-media-frame .fa-linkedin {
+.web-context .home-page .content .social-media-frame .fa-linkedin {
   text-shadow: 2px 2px #000000;
   color: #c7c7c7;
   border: 1px 1px #777;
 }
 
-.home-page .content .social-media-frame .fa-twitter {
+.web-context .home-page .content .social-media-frame .fa-twitter {
   text-shadow: 2px 2px #000000;
   color: #c7c7c7;
   border: 1px 1px #777;
 }
 
-.home-page .content .social-media-frame .fa-instagram {
+.web-context .home-page .content .social-media-frame .fa-instagram {
   text-shadow: 2px 2px #000000;
   color: #c7c7c7;
   border: 1px 1px #777;
 }
 
-.home-page .content .social-media-frame .fa:hover {
+.web-context .home-page .content .social-media-frame .fa:hover {
   opacity: 0.7;
 }
 
-.home-page .content h3 {
+.web-context .home-page .content h3 {
   font-size: 60px;
   font-weight: bolder;
   color: #1A1A1A;
 }
 
-.home-page .content p {
+.web-context .home-page .content p {
   font-family: "Poppins";
   font-size: 24px;
   line-height: 30px;
@@ -273,7 +262,7 @@ main #responsive {
   color: #7e7e7e;
 }
 
-.home-page .content .frame {
+.web-context .home-page .content .frame {
   display: inline-block;
   width: 260px;
   height: 260px;
@@ -284,7 +273,7 @@ main #responsive {
   border-radius: 100%;
 }
 
-.home-page .content .frame .image-content {
+.web-context .home-page .content .frame .image-content {
   display: inline-block;
   max-width: 240px;
   height: auto;
@@ -292,9 +281,11 @@ main #responsive {
   border-radius: 100%;
 }
 
-.about-page {
-  padding: 100px 40px 40px 40px;
-  height: 14%;
+.web-context .about-page {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 100px 0px 100px 40px;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -303,36 +294,41 @@ main #responsive {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-height: 100vh;
 }
 
-.about-page .content {
+.web-context .about-page h3 {
+  padding-left: 25px;
+  font-size: 60px;
+  font-weight: bolder;
+  color: #1A1A1A;
+  margin-bottom: 0px;
+}
+
+.web-context .about-page .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 60px 60px 0px 0px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 80%;
 }
 
-.about-page .content .top-content {
-  width: 50%;
+.web-context .about-page .content .top-content {
   margin-top: 20px;
+  width: 50vh;
+  margin-right: 120px;
 }
 
-.about-page .content .top-content .about-title {
-  padding-left: 40px;
+.web-context .about-page .content .top-content .about-title {
+  padding-left: 31px;
   font-size: 60px;
   font-weight: bolder;
   color: #1A1A1A;
 }
 
-.about-page .content .top-content .introduction {
-  padding-right: 200px;
+.web-context .about-page .content .top-content .introduction {
+  padding-right: 20px;
   list-style: none;
   font-weight: 400;
   display: -webkit-box;
@@ -346,16 +342,16 @@ main #responsive {
       flex-wrap: wrap;
 }
 
-.about-page .content .top-content .introduction .brief-intro {
+.web-context .about-page .content .top-content .introduction .brief-intro {
   font-size: 22px;
   margin-bottom: 20px;
 }
 
-.about-page .content .top-content .introduction .brief-intro span {
+.web-context .about-page .content .top-content .introduction .brief-intro span {
   font-weight: 600;
 }
 
-.about-page .content .top-content .introduction p {
+.web-context .about-page .content .top-content .introduction p {
   font-family: "Poppins";
   font-size: 18px;
   line-height: 30px;
@@ -364,7 +360,7 @@ main #responsive {
   color: #7e7e7e;
 }
 
-.about-page .content .top-content .introduction .skill {
+.web-context .about-page .content .top-content .introduction .skill {
   margin-bottom: 20px;
   font-size: 22px;
   font-weight: 600;
@@ -374,10 +370,9 @@ main #responsive {
   color: #1A1A1A;
 }
 
-.about-page .content .bottom-content {
+.web-context .about-page .content .bottom-content {
   margin-top: 20px;
   width: 50%;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -390,20 +385,22 @@ main #responsive {
           flex-direction: row;
   overflow: visible;
   border-radius: 20px;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
 }
 
-.about-page .content .bottom-content .experience {
+.web-context .about-page .content .bottom-content .experience {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: 50px;
-  width: 200px;
-  height: 200px;
+  width: 20vh;
+  height: 20vh;
   text-align: center;
   z-index: 3;
-  background-color: #5f4ff1;
+  background-color: #9489f3;
   border-radius: 50%;
   -webkit-box-shadow: 10px #e9e9f1;
           box-shadow: 10px #e9e9f1;
@@ -414,36 +411,41 @@ main #responsive {
   position: absolute;
 }
 
-.about-page .content .bottom-content .experience h3 {
+.web-context .about-page .content .bottom-content .experience h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-left: 25px;
+  padding-left: 5px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 35px;
+  font-size: 25px;
+  color: #fff;
 }
 
-.about-page .content .bottom-content .experience h3 span {
-  font-size: 15px;
-  padding-left: 25px;
+.web-context .about-page .content .bottom-content .experience h3 span {
+  font-size: 5px;
+  padding-left: 35px;
+  color: #3021b8;
 }
 
-.about-page .content .bottom-content img {
-  height: 95%;
-  width: 70%;
-  margin-left: 150px;
-  margin-bottom: 50px;
+.web-context .about-page .content .bottom-content img {
+  height: 100%;
+  width: 100%;
+  margin-left: 60px;
+  margin-bottom: 30px;
   border-radius: 10px;
 }
 
-.service-page {
+.web-context .service-page {
   background-color: #F9F9FC;
-  padding: 100px 40px 40px 40px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 100px 0px 100px 40px;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -452,10 +454,9 @@ main #responsive {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 10%;
 }
 
-.service-page .service-title {
+.web-context .service-page .service-title {
   padding-left: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -468,13 +469,13 @@ main #responsive {
   word-wrap: break-word;
 }
 
-.service-page .service-title h3 {
+.web-context .service-page .service-title h3 {
   font-size: 60px;
   font-weight: bolder;
   color: #1A1A1A;
 }
 
-.service-page .service-title p {
+.web-context .service-page .service-title p {
   font-family: "Poppins";
   font-size: 18px;
   line-height: 30px;
@@ -483,7 +484,7 @@ main #responsive {
   color: #7e7e7e;
 }
 
-.service-page .service-list {
+.web-context .service-page .service-list {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -505,7 +506,7 @@ main #responsive {
   padding-top: 40px;
 }
 
-.service-page .service-list .service-content {
+.web-context .service-page .service-list .service-content {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -524,7 +525,7 @@ main #responsive {
   transition: 0.4s;
 }
 
-.service-page .service-list .service-content .inner-list {
+.web-context .service-page .service-list .service-content .inner-list {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -538,13 +539,13 @@ main #responsive {
           align-items: stretch;
 }
 
-.service-page .service-list .service-content .inner-list .material-icons {
+.web-context .service-page .service-list .service-content .inner-list .material-icons {
   color: #9cbcf8;
   font-size: 70px;
   height: 38%;
 }
 
-.service-page .service-list .service-content .inner-list .serivce-name {
+.web-context .service-page .service-list .service-content .inner-list .serivce-name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -556,15 +557,15 @@ main #responsive {
   font-size: 30px;
 }
 
-.service-page .service-list .service-content .inner-list .serivce-name h3 {
+.web-context .service-page .service-list .service-content .inner-list .serivce-name h3 {
   margin: 0px;
 }
 
-.service-page .service-list .service-content .inner-list a {
+.web-context .service-page .service-list .service-content .inner-list a {
   margin-top: 20px;
 }
 
-.service-page .service-list .service-content .inner-list .learn-more {
+.web-context .service-page .service-list .service-content .inner-list .learn-more {
   text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -572,7 +573,7 @@ main #responsive {
   position: relative;
 }
 
-.service-page .service-list .service-content .inner-list .learn-more p {
+.web-context .service-page .service-list .service-content .inner-list .learn-more p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -581,7 +582,7 @@ main #responsive {
   font-weight: 500;
 }
 
-.service-page .service-list .service-content .inner-list .learn-more .learn-more-arrow {
+.web-context .service-page .service-list .service-content .inner-list .learn-more .learn-more-arrow {
   content: "";
   width: 15px;
   height: 2px;
@@ -593,7 +594,7 @@ main #responsive {
   transition: width 0.4s;
 }
 
-.service-page .service-list .service-content .inner-list .learn-more .learn-more-arrow:after {
+.web-context .service-page .service-list .service-content .inner-list .learn-more .learn-more-arrow:after {
   display: inline;
   content: "";
   width: 8px;
@@ -608,7 +609,7 @@ main #responsive {
   transition: left 0.4s;
 }
 
-.service-page .service-list .service-content .inner-list .learn-more .learn-more-arrow:before {
+.web-context .service-page .service-list .service-content .inner-list .learn-more .learn-more-arrow:before {
   display: inline;
   content: "";
   width: 8px;
@@ -623,35 +624,35 @@ main #responsive {
   transition: left 0.4s;
 }
 
-.service-page .service-content:hover {
+.web-context .service-page .service-content:hover {
   background-color: #0a0a0a;
   color: #fbfbfb;
 }
 
-.service-page .service-content:hover .inner-list .learn-more p {
+.web-context .service-page .service-content:hover .inner-list .learn-more p {
   color: #fbfbfb;
 }
 
-.service-page .service-content:hover .inner-list .learn-more .learn-more-arrow {
+.web-context .service-page .service-content:hover .inner-list .learn-more .learn-more-arrow {
   background-color: #fbfbfb;
   width: 40px;
 }
 
-.service-page .service-content:hover .inner-list .learn-more .learn-more-arrow:before {
+.web-context .service-page .service-content:hover .inner-list .learn-more .learn-more-arrow:before {
   background-color: #fbfbfb;
   left: 35px;
 }
 
-.service-page .service-content:hover .inner-list .learn-more .learn-more-arrow:after {
+.web-context .service-page .service-content:hover .inner-list .learn-more .learn-more-arrow:after {
   background-color: #fbfbfb;
   left: 35px;
 }
 
-.portfolio-page {
-  padding: 100px 40px 40px 40px;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+.web-context .portfolio-page {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 100px 0px 100px 40px;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -662,17 +663,17 @@ main #responsive {
           flex-direction: column;
 }
 
-.portfolio-page .portfolio-title {
+.web-context .portfolio-page .portfolio-title {
   padding-left: 40px;
 }
 
-.portfolio-page .portfolio-title h3 {
+.web-context .portfolio-page .portfolio-title h3 {
   font-size: 60px;
   font-weight: bolder;
   color: #1A1A1A;
 }
 
-.portfolio-page .portfolio-title p {
+.web-context .portfolio-page .portfolio-title p {
   font-family: "Poppins";
   font-size: 18px;
   line-height: 30px;
@@ -681,21 +682,20 @@ main #responsive {
   color: #7e7e7e;
 }
 
-.portfolio-page .carousel-inner {
+.web-context .portfolio-page .carousel-inner {
   width: 94%;
   margin: 50px auto;
-  min-height: 300px;
   position: relative;
   overflow: visible;
   margin-left: 0px;
   padding-left: 40px;
 }
 
-.portfolio-page .carousel-inner .portfolio-carousel-inner {
+.web-context .portfolio-page .carousel-inner .portfolio-carousel-inner {
   overflow: hidden;
 }
 
-.portfolio-page .carousel-inner .portfolio-carousel-inner .portfolio-list {
+.web-context .portfolio-page .carousel-inner .portfolio-carousel-inner .portfolio-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -712,7 +712,7 @@ main #responsive {
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
-.portfolio-page .carousel-inner .portfolio-carousel-inner .portfolio-list .portfolio-content {
+.web-context .portfolio-page .carousel-inner .portfolio-carousel-inner .portfolio-list .portfolio-content {
   border-radius: 20px;
   width: 33.5%;
   height: 500px;
@@ -723,7 +723,7 @@ main #responsive {
           box-sizing: border-box;
 }
 
-.portfolio-page .carousel-inner .portfolio-carousel-inner .portfolio-list .portfolio-content .portfolio-inner-list {
+.web-context .portfolio-page .carousel-inner .portfolio-carousel-inner .portfolio-list .portfolio-content .portfolio-inner-list {
   width: 99%;
   height: 100%;
   -webkit-box-sizing: border-box;
@@ -739,41 +739,41 @@ main #responsive {
   justify-items: stretch;
 }
 
-.portfolio-page .carousel-inner .portfolio-carousel-inner .portfolio-list .portfolio-content .portfolio-inner-list .img-frame {
+.web-context .portfolio-page .carousel-inner .portfolio-carousel-inner .portfolio-list .portfolio-content .portfolio-inner-list .img-frame {
   border-radius: 20px;
   overflow: hidden;
 }
 
-.portfolio-page .carousel-inner .portfolio-carousel-inner .portfolio-list .portfolio-content .portfolio-inner-list .img-frame .portofolio-example {
+.web-context .portfolio-page .carousel-inner .portfolio-carousel-inner .portfolio-list .portfolio-content .portfolio-inner-list .img-frame .portofolio-example {
   width: 100%;
   border-radius: 20px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.portfolio-page .carousel-inner .portfolio-carousel-inner .portfolio-list .portfolio-content .portfolio-inner-list .img-frame .portofolio-example:hover {
+.web-context .portfolio-page .carousel-inner .portfolio-carousel-inner .portfolio-list .portfolio-content .portfolio-inner-list .img-frame .portofolio-example:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-.portfolio-page .carousel-inner .portfolio-carousel-inner .portfolio-list .portfolio-content .portfolio-inner-list h3 {
+.web-context .portfolio-page .carousel-inner .portfolio-carousel-inner .portfolio-list .portfolio-content .portfolio-inner-list h3 {
   font-family: "Poppins";
   font-size: 20px;
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
-.portfolio-page .carousel-inner .portfolio-carousel-inner .portfolio-list .portfolio-content .portfolio-inner-list p {
+.web-context .portfolio-page .carousel-inner .portfolio-carousel-inner .portfolio-list .portfolio-content .portfolio-inner-list p {
   font-family: "Poppins";
   font-size: 16px;
   color: #777;
 }
 
-.portfolio-page .carousel-nav {
+.web-context .portfolio-page .carousel-nav {
   opacity: 0.7;
 }
 
-.portfolio-page .carousel-nav button {
+.web-context .portfolio-page .carousel-nav button {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -781,38 +781,38 @@ main #responsive {
   position: absolute;
 }
 
-.portfolio-page .carousel-nav .prev {
+.web-context .portfolio-page .carousel-nav .prev {
   left: 5px;
   bottom: 260px;
 }
 
-.portfolio-page .carousel-nav .next {
+.web-context .portfolio-page .carousel-nav .next {
   bottom: 260px;
   left: 97%;
 }
 
-.portfolio-page .prev:hover {
+.web-context .portfolio-page .prev:hover {
   background-color: #292929;
 }
 
-.portfolio-page .prev:hover .material-icons {
+.web-context .portfolio-page .prev:hover .material-icons {
   color: #fff;
 }
 
-.portfolio-page .next:hover {
+.web-context .portfolio-page .next:hover {
   background-color: #292929;
 }
 
-.portfolio-page .next:hover .material-icons {
+.web-context .portfolio-page .next:hover .material-icons {
   color: #fff;
 }
 
-.testimonial-page {
+.web-context .testimonial-page {
   background-color: #F9F9FC;
-  padding: 100px 40px 40px 40px;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 100px 0px 90px 40px;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -823,17 +823,17 @@ main #responsive {
           flex-direction: column;
 }
 
-.testimonial-page .testimonial-title {
+.web-context .testimonial-page .testimonial-title {
   padding-left: 40px;
 }
 
-.testimonial-page .testimonial-title h3 {
+.web-context .testimonial-page .testimonial-title h3 {
   font-size: 60px;
   font-weight: bolder;
   color: #1A1A1A;
 }
 
-.testimonial-page .testimonial-title p {
+.web-context .testimonial-page .testimonial-title p {
   font-family: "Poppins";
   font-size: 18px;
   line-height: 30px;
@@ -842,7 +842,7 @@ main #responsive {
   color: #7e7e7e;
 }
 
-.testimonial-page .testimonial-carousel {
+.web-context .testimonial-page .testimonial-carousel {
   width: 92%;
   margin: 50px auto;
   min-height: 200px;
@@ -852,11 +852,11 @@ main #responsive {
   margin-right: 0px;
 }
 
-.testimonial-page .testimonial-carousel .testimonial-carousel-inner {
+.web-context .testimonial-page .testimonial-carousel .testimonial-carousel-inner {
   overflow: hidden;
 }
 
-.testimonial-page .testimonial-carousel .testimonial-carousel-inner .testimonial-carousel-inner-list {
+.web-context .testimonial-page .testimonial-carousel .testimonial-carousel-inner .testimonial-carousel-inner-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -873,7 +873,7 @@ main #responsive {
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
-.testimonial-page .testimonial-carousel .testimonial-carousel-inner .testimonial-carousel-inner-list .testimonial-carousel-inner-list-content {
+.web-context .testimonial-page .testimonial-carousel .testimonial-carousel-inner .testimonial-carousel-inner-list .testimonial-carousel-inner-list-content {
   width: 51%;
   height: 350px;
   -ms-flex-negative: 0;
@@ -883,7 +883,7 @@ main #responsive {
           box-sizing: border-box;
 }
 
-.testimonial-page .testimonial-carousel .testimonial-carousel-inner .testimonial-carousel-inner-list .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card {
+.web-context .testimonial-page .testimonial-carousel .testimonial-carousel-inner .testimonial-carousel-inner-list .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card {
   width: 96%;
   height: 100%;
   background-color: #fff;
@@ -899,7 +899,7 @@ main #responsive {
   padding-right: 30px;
 }
 
-.testimonial-page .testimonial-carousel .testimonial-carousel-inner .testimonial-carousel-inner-list .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card .testimonial-carousel-inner-list-content-card-inner {
+.web-context .testimonial-page .testimonial-carousel .testimonial-carousel-inner .testimonial-carousel-inner-list .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card .testimonial-carousel-inner-list-content-card-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -908,7 +908,7 @@ main #responsive {
           justify-content: stretch;
 }
 
-.testimonial-page .testimonial-carousel .testimonial-carousel-inner .testimonial-carousel-inner-list .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card .testimonial-carousel-inner-list-content-card-inner img {
+.web-context .testimonial-page .testimonial-carousel .testimonial-carousel-inner .testimonial-carousel-inner-list .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card .testimonial-carousel-inner-list-content-card-inner img {
   width: 130px;
   height: 130px;
   margin-left: 50px;
@@ -916,7 +916,7 @@ main #responsive {
   border-radius: 10px;
 }
 
-.testimonial-page .testimonial-carousel .testimonial-carousel-inner .testimonial-carousel-inner-list .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card .testimonial-carousel-inner-list-content-card-inner .p-title {
+.web-context .testimonial-page .testimonial-carousel .testimonial-carousel-inner .testimonial-carousel-inner-list .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card .testimonial-carousel-inner-list-content-card-inner .p-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -928,24 +928,24 @@ main #responsive {
   margin-top: 40px;
 }
 
-.testimonial-page .testimonial-carousel .testimonial-carousel-inner .testimonial-carousel-inner-list .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card .testimonial-carousel-inner-list-content-card-inner .p-title .p-name {
+.web-context .testimonial-page .testimonial-carousel .testimonial-carousel-inner .testimonial-carousel-inner-list .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card .testimonial-carousel-inner-list-content-card-inner .p-title .p-name {
   font-size: 20px;
   font-weight: bold;
   color: #272727;
 }
 
-.testimonial-page .testimonial-carousel .testimonial-carousel-inner .testimonial-carousel-inner-list .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card .testimonial-carousel-inner-list-content-card-inner .p-title .p-intro {
+.web-context .testimonial-page .testimonial-carousel .testimonial-carousel-inner .testimonial-carousel-inner-list .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card .testimonial-carousel-inner-list-content-card-inner .p-title .p-intro {
   font-size: 15px;
   color: #7e7e7e;
   margin-top: 2px;
 }
 
-.testimonial-page .testimonial-carousel .testimonial-carousel-inner .testimonial-carousel-inner-list .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card .testimonial-carousel-inner-list-content-card-inner svg {
+.web-context .testimonial-page .testimonial-carousel .testimonial-carousel-inner .testimonial-carousel-inner-list .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card .testimonial-carousel-inner-list-content-card-inner svg {
   margin-left: 160px;
   margin-top: 80px;
 }
 
-.testimonial-page .testimonial-carousel .testimonial-carousel-inner .testimonial-carousel-inner-list .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card p {
+.web-context .testimonial-page .testimonial-carousel .testimonial-carousel-inner .testimonial-carousel-inner-list .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card p {
   margin-top: 30px;
   word-wrap: break-word;
   margin-left: 42px;
@@ -953,19 +953,19 @@ main #responsive {
   color: #7e7e7e;
 }
 
-.testimonial-page .testimonial-carousel-nav {
+.web-context .testimonial-page .testimonial-carousel-nav {
   margin-top: 40px;
   display: block;
   text-align: center;
   margin-right: 8px;
 }
 
-.testimonial-page .testimonial-carousel-nav button:hover {
+.web-context .testimonial-page .testimonial-carousel-nav button:hover {
   background-color: #fff;
   border-color: #000000;
 }
 
-.testimonial-page .testimonial-carousel-nav button {
+.web-context .testimonial-page .testimonial-carousel-nav button {
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -973,41 +973,50 @@ main #responsive {
   background-color: #888888;
 }
 
-.blog-page {
-  padding: 100px 40px 40px 40px;
-  height: 5%;
+.web-context .blog-page {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 100px 0px 100px 20px;
   z-index: 1;
-  padding-left: 80px;
 }
 
-.blog-page h3 {
+.web-context .blog-page h3 {
   font-size: 60px;
   font-weight: bolder;
   color: #1A1A1A;
+  padding-left: 60px;
 }
 
-.blog-page p {
+.web-context .blog-page p {
   font-family: "Poppins";
   font-size: 28px;
   line-height: 30px;
   letter-spacing: 0px;
   word-wrap: break-word;
   color: #7e7e7e;
+  padding-left: 60px;
 }
 
-.contact-page {
+.web-context .contact-page {
   background-color: #F9F9FC;
-  height: 16%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 100px 0px 100px 0px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
   /* Style the submit button with a specific background color etc */
   /* When moving the mouse over the submit button, add a darker green color */
 }
 
-.contact-page .contact-page-container {
+.web-context .contact-page .contact-page-container {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1027,17 +1036,17 @@ main #responsive {
   margin: 100px 40px 40px 40px;
 }
 
-.contact-page .contact-page-container .contact-page-container-row-title {
+.web-context .contact-page .contact-page-container .contact-page-container-row-title {
   word-wrap: break-word;
 }
 
-.contact-page .contact-page-container .contact-page-container-row-title h3 {
+.web-context .contact-page .contact-page-container .contact-page-container-row-title h3 {
   font-size: 60px;
   font-weight: bolder;
   color: #1A1A1A;
 }
 
-.contact-page .contact-page-container .contact-page-container-row-title p {
+.web-context .contact-page .contact-page-container .contact-page-container-row-title p {
   font-family: "Poppins";
   font-size: 28px;
   line-height: 30px;
@@ -1047,7 +1056,7 @@ main #responsive {
   margin-bottom: 10px;
 }
 
-.contact-page .contact-page-container .contact-page-container-row {
+.web-context .contact-page .contact-page-container .contact-page-container-row {
   margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1060,7 +1069,7 @@ main #responsive {
       flex-wrap: wrap;
 }
 
-.contact-page .contact-page-container .contact-page-container-row .contact-page-container-col {
+.web-context .contact-page .contact-page-container .contact-page-container-row .contact-page-container-col {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1072,13 +1081,17 @@ main #responsive {
       flex-wrap: wrap;
 }
 
-.contact-page .contact-page-container .contact-page-container-row .contact-page-container-col .card {
+.web-context .contact-page .contact-page-container .contact-page-container-row .contact-page-container-col .card {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  margin-left: 5px;
+  display: inline-block;
+  border-style: none;
+  border-radius: 2px;
 }
 
-.contact-page .contact-page-container .contact-page-container-row .contact-page-container-col .contact-input {
+.web-context .contact-page .contact-page-container .contact-page-container-row .contact-page-container-col .contact-input {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -1095,25 +1108,25 @@ main #responsive {
           align-items: stretch;
 }
 
-.contact-page .contact-page-container .contact-page-container-row .contact-page-container-col .contact-input .bar {
+.web-context .contact-page .contact-page-container .contact-page-container-row .contact-page-container-col .contact-input .bar {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   margin: 10px;
 }
 
-.contact-page .contact-page-container .contact-page-container-row .contact-page-container-col .contact-input .submit-bar {
+.web-context .contact-page .contact-page-container .contact-page-container-row .contact-page-container-col .contact-input .submit-bar {
   margin: 10px;
   width: 100px;
 }
 
-.contact-page .contact-page-container .contact-page-container-row .contact-page-container-col .position-map {
+.web-context .contact-page .contact-page-container .contact-page-container-row .contact-page-container-col .position-map {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.contact-page input[type=submit] {
+.web-context .contact-page input[type=submit] {
   background-color: #04AA6D;
   color: white;
   padding: 12px 20px;
@@ -1122,11 +1135,11 @@ main #responsive {
   cursor: pointer;
 }
 
-.contact-page input[type=submit]:hover {
+.web-context .contact-page input[type=submit]:hover {
   background-color: #45a049;
 }
 
-.contact-page input[type=query] {
+.web-context .contact-page input[type=query] {
   border: none;
   border-bottom: 2px solid #c2c2c2;
   outline: none;

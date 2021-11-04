@@ -74,10 +74,17 @@ Problems need to be fixed which is pointed by tutor list 2.0:
 
 porblem identified
 
-    growing arrow when hover should be built by drawing line by postion
+    1.growing arrow when hover should be built by drawing line by postion
     The abosulte position is based on the current box
+    2.use vh instead px to match screen height, vh stands for current screent size
+
 
 function finished
 
     social medial icons are added.
     arrow fixed
+
+problems need to solve:
+    1. carusoul in profilo move incorrect
+    2. Testimonial box content problem for small screen
+    3. about me's text size doesn't chenge for small screen 

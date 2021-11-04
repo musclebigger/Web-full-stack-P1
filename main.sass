@@ -7,20 +7,15 @@
 main
     padding: 0px
     margin-left: 320px
-    position: absolute
-    display: flex
-    flex-direction: column
-    width: 83.4%
-    height: 6000px
-    overflow: hidden
+    position: relative
 
-    #nav-icon
-        display: none
-        z-index: 2
-    #responsive
-        display: none
-        font-size: 0%
-        z-index: 2
+#nav-icon
+    display: none
+    z-index: 2
+#responsive
+    display: none
+    font-size: 0%
+    z-index: 2
 //nav
 
 .sideBar
@@ -103,645 +98,676 @@ main
                 text-shadow: 0.5px 0.5px #6977f1
                 color: #6d93fa
 
+.navbar
+    display: none
+
 @media screen and (max-width: 810px)
-    main
+    .web-context
         margin-left: 0px
-        width: 100%
 
-        #nav-icon
-            position: fixed
-            width: 100%
-            background-color: #474747
-            color: #ffffff
-            display: inline-block
-            padding-left: 5px
+    .navbar
+        display: block
+    
+@media screen and (max-width: 810px)
+    .top-content
+        margin-right: 0px
 
-        .carousel-inner
-            display: none
-
-        .testimonial-carousel
-            display: none
+    // #nav-icon
+    //     position: fixed
+    //     width: 100%
+    //     background-color: #777
+    //     color: #ffffff
+    //     display: inline-block
+    //     padding-left: 5px
+    // #responsive
+    //     display: flex
+    //     flex-direction: row
+    //     width: 100%
+    //     .responsive-button
+    //         text-decoration: none
+    //         color: #616060
+    //         font-size: 14px
+    //         font-weight: 600
+    //         border-radius: 6px
+    //         border-style: 1px solid #777
 
     .sideBar
         display: none
 
-//home
-.home-page
-    background-color: #F9F9FC
-    height: 16%
-    z-index: 1
-    display: flex
-    justify-items: stretch
-    align-items: center
+.web-context
 
-    .content
-        flex: 1//this element should be used with justify-items: strech to fill the content, because there have remaining content inside current box
-        text-align: center
-
-        padding: 0px 20px
-
-        .social-media-frame
-            display: flex
-            justify-content: center
-            .fa
-                padding: 20px
-                font-size: 20px
-                width: 20px
-                height: 20px
-                text-align: center
-                text-decoration: none
-                margin: 5px 2px
-
-            .fa-facebook
-                text-shadow: 2px 2px #000000
-                color: #c7c7c7
-                border: 1px 1px #777
-
-            .fa-linkedin
-                text-shadow: 2px 2px #000000
-                color: #c7c7c7
-                border: 1px 1px #777
-
-            .fa-twitter
-                text-shadow: 2px 2px #000000
-                color: #c7c7c7
-                border: 1px 1px #777
-
-            .fa-instagram
-                text-shadow: 2px 2px #000000
-                color: #c7c7c7
-                border: 1px 1px #777
-
-            .fa:hover
-                opacity: 0.7
-
-        h3
-            font-size: 60px
-            font-weight: bolder
-            color: #1A1A1A
-        p
-            font-family: "Poppins"
-            font-size: 24px
-            line-height: 30px
-            letter-spacing: 0px
-            word-wrap: break-word
-            color: #7e7e7e
-
-        .frame
-            display: inline-block
-            width: 260px
-            height: 260px
-            border-radius: 100%
-            position: relative
-            margin-bottom: 27px
-            background-color: #e2e2e2
-            border-radius: 100%
-
-            .image-content
-                display: inline-block
-                max-width: 240px//width 100% change, 22 line change as well
-                height: auto
-                margin-top: 10px//move down 10px in order to center the image
-                border-radius: 100%
-//about
-.about-page
-    padding: 100px 40px 40px 40px
-    height: 14%
-    z-index: 1
-    display: flex
-    flex-direction: column
-
-    .content
-        display: flex
-        padding: 60px 60px 0px 0px
-        flex-direction: row
-        flex-wrap: wrap
-        height: 80%
-
-        .top-content
-            width: 50%
-            margin-top: 20px
-
-            .about-title
-                padding-left: 40px
-                font-size: 60px
-                font-weight: bolder
-                color: #1A1A1A
-
-            .introduction
-                padding-right: 200px
-                list-style: none
-                font-weight: 400
-                display: flex
-                flex-direction: column
-                flex-wrap: wrap
-
-                .brief-intro
-                    font-size: 22px
-                    margin-bottom: 20px
-
-                    span
-                        font-weight: 600
-
-                p
-                    font-family: "Poppins"
-                    font-size: 18px
-                    line-height: 30px
-                    letter-spacing: 0px
-                    word-wrap: break-word
-                    color: #7e7e7e
-
-                .skill
-                    margin-bottom: 20px
-                    font-size: 22px
-                    font-weight: 600
-                    margin-top: 20px
-                    line-height: 1.5
-                    font-family: "poppins"
-                    color: #1A1A1A
-
-            //change name to top 
-        .bottom-content
-            margin-top: 20px
-            width: 50%
-            height: 100%
-            display: flex
-            align-items: flex-end
-            flex-direction: row
-            overflow: visible
-            border-radius: 20px
-
-            .experience
-                display: flex
-                flex-wrap: wrap
-                margin-left: 50px
-                width: 200px
-                height: 200px
-                text-align: center
-                z-index: 3
-                background-color: #5f4ff1
-                border-radius: 50%
-                box-shadow: 10px #e9e9f1
-                color: #fff
-                align-items: center
-                position: absolute
-
-                h3
-                    display: flex
-                    flex-wrap: wrap
-                    padding-left: 25px
-                    flex-direction: column
-                    font-size: 35px
-                    span
-                        font-size: 15px
-                        padding-left: 25px
-            
-            img
-                height: 95%
-                width: 70%
-                margin-left: 150px
-                margin-bottom: 50px
-                border-radius: 10px
-//service
-.service-page
-    background-color: #F9F9FC
-    padding: 100px 40px 40px 40px
-    z-index: 1
-    display: flex
-    flex-direction: column
-    height: 10%
-
-    .service-title
-        padding-left: 40px
-        display: flex
-        justify-items: flex-start
-        flex-direction: column
-        word-wrap: break-word
-
-        h3
-            font-size: 60px
-            font-weight: bolder
-            color: #1A1A1A
-        p
-            font-family: "Poppins"
-            font-size: 18px
-            line-height: 30px
-            letter-spacing: 0px
-            word-wrap: break-word
-            color: #7e7e7e
-
-    .service-list
-        flex-grow: 1
-        display: flex
-        flex-direction: row
-        list-style-type: none
+    //home
+    .home-page
         background-color: #F9F9FC
-        margin-bottom: 0
-        flex-wrap: wrap
-        align-items: stretch
-        padding-top: 40px
-
-        .service-content
-            flex-grow: 1
-            display: flex
-            flex-direction: column
-            padding: 40px 40px 40px 40px
-            background-color: #fff
-            margin: 40px 40px 40px 0px
-            border-radius: 4px
-            transition: 0.4s
-
-            .inner-list
-                height: 100%
-                display: flex
-                flex-direction: column
-                align-items: stretch
-
-                .material-icons
-                    color: #9cbcf8
-                    font-size: 70px
-                    height: 38%
-
-                .serivce-name
-                    display: flex
-                    flex-direction: column
-                    height: 38%
-                    font-size: 30px
-                    h3
-                        margin: 0px
-
-                a
-                    margin-top: 20px
-
-                .learn-more
-                    text-decoration: none
-                    display: flex
-                    position: relative
-                    p
-                        display: flex
-                        color: #7E7E7E
-                        font-size: 20px
-                        font-weight: 500
-                    .learn-more-arrow
-                        content: ""
-                        width: 15px
-                        height: 2px
-                        background-color: #7E7E7E
-                        position: absolute
-                        left: 110px
-                        bottom: 30px
-                        transition: width 0.4s
-
-                    .learn-more-arrow:after
-                        display: inline
-                        content: ""
-                        width: 8px
-                        height: 2px
-                        background-color: #7E7E7E
-                        transform: rotate(45deg)
-                        position: absolute
-                        left: 10px
-                        bottom: 3px
-                        transition: left 0.4s
-                    .learn-more-arrow:before
-                        display: inline
-                        content: ""
-                        width: 8px
-                        height: 2px
-                        background-color: #7E7E7E
-                        transform: rotate(-45deg)
-                        position: absolute
-                        left: 10px
-                        top: 3px
-                        transition: left 0.4s
-
-    .service-content:hover
-        background-color: #0a0a0a
-        color: #fbfbfb
-        .inner-list
-            .learn-more
-                p
-                    color: #fbfbfb
-                .learn-more-arrow
-                    background-color: #fbfbfb
-                    width: 40px
-                    //based on the width increment, 40-15
-                .learn-more-arrow:before
-                    background-color: #fbfbfb
-                    left: 35px//based on the width increment
-                .learn-more-arrow:after
-                    background-color: #fbfbfb
-                    left: 35px
-//protofilo
-
-.portfolio-page
-    padding: 100px 40px 40px 40px
-    flex: 2
-    z-index: 1
-    display: flex
-    flex-direction: column
-
-    .portfolio-title
-        padding-left: 40px
-        h3
-            font-size: 60px
-            font-weight: bolder
-            color: #1A1A1A
-        p
-            font-family: "Poppins"
-            font-size: 18px
-            line-height: 30px
-            letter-spacing: 0px
-            word-wrap: break-word
-            color: #7e7e7e
-
-    .carousel-inner
-        //carousel container
-        width: 94%
-        margin: 50px auto
-        min-height: 300px
-        position: relative
-        overflow: visible
-        margin-left: 0px
-        padding-left: 40px
-
-        .portfolio-carousel-inner
-            overflow: hidden
-
-            .portfolio-list
-                //track
-                display: flex
-                flex-direction: row
-                list-style-type: none
-                // align-items: center 
-                margin-bottom: 0
-                padding-left: 0
-                transition: transform 0.3s
-                .portfolio-content
-                    //card-container
-                    border-radius: 20px
-                    width: 33.5% //calculate by carousel container, if it keeps three in screen, the 1280px is divided by 3
-                    height: 500px
-                    flex-shrink: 0 //adjust the box that card won't shrink when the content is filled, it is going to be visiable
-                    padding-right: 25px
-                    box-sizing: border-box
-
-                    .portfolio-inner-list
-                        //card
-                        width: 99%
-                        height: 100%
-                        box-sizing: border-box
-                        border-radius: 10px
-                        display: flex
-                        flex-direction: column
-                        justify-items: stretch
-                        .img-frame
-                            border-radius: 20px
-                            overflow: hidden
-                            .portofolio-example
-                                width: 100%
-                                border-radius: 20px
-                                transition: 0.3s
-                            .portofolio-example:hover
-                                transform: scale(1.2)
-                        h3
-                            font-family: "Poppins"
-                            font-size: 20px
-                            margin-top: 15px
-                            margin-bottom: 15px
-                        p
-                        
-                            font-family: "Poppins"
-                            font-size: 16px
-                            color: #777
-    .carousel-nav 
-        opacity: 0.7
-        button
-            width: 80px
-            height: 80px
-            border-radius: 50%
-            border: 1px solid #aaa
-            position: absolute
-        .prev
-            left: 5px
-            bottom: 260px
-        .next
-            bottom: 260px
-            left: 97%
-                
-    .prev:hover
-        background-color: #292929
-        .material-icons
-            color: #fff
-    .next:hover
-        background-color: #292929
-        .material-icons
-            color: #fff
-    
-//Testminonial
-.testimonial-page
-    background-color: #F9F9FC
-    padding: 100px 40px 40px 40px
-    flex: 2
-    z-index: 1
-    display: flex
-    flex-direction: column
-
-    .testimonial-title
-        padding-left: 40px
-        h3
-            font-size: 60px
-            font-weight: bolder
-            color: #1A1A1A
-        p
-            font-family: "Poppins"
-            font-size: 18px
-            line-height: 30px
-            letter-spacing: 0px
-            word-wrap: break-word
-            color: #7e7e7e
-
-    .testimonial-carousel
-        //carousel container
-        width: 92%
-        margin: 50px auto
-        min-height: 200px
-        position: relative
-        overflow: visible
-        margin-left: 35px
-        margin-right: 0px
-
-        .testimonial-carousel-inner
-            overflow: hidden
-
-            .testimonial-carousel-inner-list
-                //track
-                display: flex
-                flex-direction: row
-                list-style-type: none
-                // align-items: center 
-                margin-bottom: 0
-                padding-left: 0
-                transition: transform 0.3s
-                .testimonial-carousel-inner-list-content
-                    //card-container
-                    width: 51% //calculate by carousel container, if it keeps two in screen, the 1280px is divided by 2
-                    height: 350px
-                    flex-shrink: 0 //adjust the box that card won't shrink when the content is filled, it is going to be visiable
-                    padding-right: 30px
-                    box-sizing: border-box
-
-                    .testimonial-carousel-inner-list-content-card
-                        //card
-                        width: 96%
-                        height: 100%
-                        background-color: #fff
-                        box-sizing: border-box
-                        display: flex
-                        flex-direction: column
-                        padding-right: 30px
-                        //card here
-                        .testimonial-carousel-inner-list-content-card-inner
-                            display: flex 
-                            justify-content: stretch
-                            img
-                                width: 130px
-                                height: 130px
-                                margin-left: 50px
-                                margin-top: 50px
-                                border-radius: 10px
-                            .p-title
-                                display: flex
-                                flex-direction: column
-                                margin-left: 30px
-                                margin-top: 40px
-                                .p-name
-                                    font-size: 20px
-                                    font-weight: bold
-                                    color: #272727
-                                .p-intro
-                                    font-size: 15px
-                                    color: #7e7e7e
-                                    margin-top: 2px
-                            svg
-                                margin-left: 160px
-                                margin-top: 80px
-                        p
-                            margin-top: 30px
-                            word-wrap: break-word
-                            margin-left: 42px
-                            font-size: 18px
-                            color: #7e7e7e
-
-    .testimonial-carousel-nav
-        margin-top: 40px
-        display: block
-        text-align: center
-        margin-right: 8px
-
-    .testimonial-carousel-nav button:hover
-        background-color: #fff
-        border-color: #000000
-
-    .testimonial-carousel-nav button
-        width: 15px
-        height: 15px
-        border-radius: 50%
-        border: 1px solid #aaa
-        background-color: #888888
-//blog
-.blog-page
-    padding: 100px 40px 40px 40px
-    height: 5%
-    z-index: 1
-    padding-left: 80px
-    h3
-        font-size: 60px
-        font-weight: bolder
-        color: #1A1A1A
-    p
-        font-family: "Poppins"
-        font-size: 28px
-        line-height: 30px
-        letter-spacing: 0px
-        word-wrap: break-word
-        color: #7e7e7e
-
-//contact
-.contact-page
-    background-color: #F9F9FC
-    height: 16%
-    display: flex
-    flex-wrap: wrap
-
-    .contact-page-container
-        list-style: none
+        z-index: 1
         display: flex
-        flex-wrap: wrap
-        flex-direction: column
-        flex-grow: 1
-        align-items: stretch
-        margin: 100px 40px 40px 40px
-        .contact-page-container-row-title
-            word-wrap: break-word
+        justify-items: stretch
+        align-items: center
+        padding: 40px
+        min-height: 100vh
+
+        .content
+            flex: 1//this element should be used with justify-items: strech to fill the content, because there have remaining content inside current box
+            text-align: center
+
+            padding: 0px 20px
+
+            .social-media-frame
+                display: flex
+                justify-content: center
+                .fa
+                    padding: 20px
+                    font-size: 20px
+                    width: 20px
+                    height: 20px
+                    text-align: center
+                    text-decoration: none
+                    margin: 5px 2px
+
+                .fa-facebook
+                    text-shadow: 2px 2px #000000
+                    color: #c7c7c7
+                    border: 1px 1px #777
+
+                .fa-linkedin
+                    text-shadow: 2px 2px #000000
+                    color: #c7c7c7
+                    border: 1px 1px #777
+
+                .fa-twitter
+                    text-shadow: 2px 2px #000000
+                    color: #c7c7c7
+                    border: 1px 1px #777
+
+                .fa-instagram
+                    text-shadow: 2px 2px #000000
+                    color: #c7c7c7
+                    border: 1px 1px #777
+
+                .fa:hover
+                    opacity: 0.7
+
             h3
                 font-size: 60px
                 font-weight: bolder
                 color: #1A1A1A
             p
                 font-family: "Poppins"
-                font-size: 28px
+                font-size: 24px
                 line-height: 30px
                 letter-spacing: 0px
                 word-wrap: break-word
                 color: #7e7e7e
-                margin-bottom: 10px
-        .contact-page-container-row
-            margin-top: 40px
+
+            .frame
+                display: inline-block
+                width: 260px
+                height: 260px
+                border-radius: 100%
+                position: relative
+                margin-bottom: 27px
+                background-color: #e2e2e2
+                border-radius: 100%
+
+                .image-content
+                    display: inline-block
+                    max-width: 240px//width 100% change, 22 line change as well
+                    height: auto
+                    margin-top: 10px//move down 10px in order to center the image
+                    border-radius: 100%
+    //about
+    .about-page
+        flex-grow: 1
+        padding: 100px 0px 100px 40px
+        z-index: 1
+        display: flex
+        flex-direction: column
+        min-height: 100vh
+        h3
+            padding-left: 25px
+            font-size: 60px
+            font-weight: bolder
+            color: #1A1A1A
+            margin-bottom: 0px
+
+        .content
             display: flex
-            flex-direction: column
+            padding: 60px 60px 0px 0px
             flex-wrap: wrap
 
-            .contact-page-container-col
-                display: flex
-                flex-direction: row
-                flex-wrap: wrap
+            .top-content
+                margin-top: 20px
+                width: 50vh
+                margin-right: 120px
 
-                .card
-                    flex: 1
+                .about-title
+                    padding-left: 31px
+                    font-size: 60px
+                    font-weight: bolder
+                    color: #1A1A1A
 
-                .contact-input
-                    flex: 1
+                .introduction
+                    padding-right: 20px
+                    list-style: none
+                    font-weight: 400
                     display: flex
                     flex-direction: column
-                    margin-right: 50px
+                    flex-wrap: wrap
+
+                    .brief-intro
+                        font-size: 22px
+                        margin-bottom: 20px
+
+                        span
+                            font-weight: 600
+
+                    p
+                        font-family: "Poppins"
+                        font-size: 18px
+                        line-height: 30px
+                        letter-spacing: 0px
+                        word-wrap: break-word
+                        color: #7e7e7e
+
+                    .skill
+                        margin-bottom: 20px
+                        font-size: 22px
+                        font-weight: 600
+                        margin-top: 20px
+                        line-height: 1.5
+                        font-family: "poppins"
+                        color: #1A1A1A
+
+            //change name to top 
+            .bottom-content
+                margin-top: 20px
+                width: 50%
+                display: flex
+                align-items: flex-end
+                flex-direction: row
+                overflow: visible
+                border-radius: 20px
+                justify-content: stretch
+
+                .experience
+                    display: flex
+                    flex-wrap: wrap
+                    width: 20vh
+                    height: 20vh
+                    text-align: center
+                    z-index: 3
+                    background-color: #9489f3
+                    border-radius: 50%
+                    box-shadow: 10px #e9e9f1
+                    color: #fff
+                    align-items: center
+                    position: absolute
+
+                    h3
+                        display: flex
+                        flex-wrap: wrap
+                        padding-left: 5px
+                        flex-direction: column
+                        font-size: 25px
+                        color: #fff
+                        span
+                            font-size: 5px
+                            padding-left: 35px
+                            color: #3021b8
+
+                img
+                    height: 100%
+                    width: 100%
+                    margin-left: 60px
+                    margin-bottom: 30px
+                    border-radius: 10px
+
+    //service
+    .service-page
+        background-color: #F9F9FC
+        flex-grow: 1
+        padding: 100px 0px 100px 40px
+        z-index: 1
+        display: flex
+        flex-direction: column
+
+        .service-title
+            padding-left: 40px
+            display: flex
+            justify-items: flex-start
+            flex-direction: column
+            word-wrap: break-word
+
+            h3
+                font-size: 60px
+                font-weight: bolder
+                color: #1A1A1A
+            p
+                font-family: "Poppins"
+                font-size: 18px
+                line-height: 30px
+                letter-spacing: 0px
+                word-wrap: break-word
+                color: #7e7e7e
+
+        .service-list
+            flex-grow: 1
+            display: flex
+            flex-direction: row
+            list-style-type: none
+            background-color: #F9F9FC
+            margin-bottom: 0
+            flex-wrap: wrap
+            align-items: stretch
+            padding-top: 40px
+
+            .service-content
+                flex-grow: 1
+                display: flex
+                flex-direction: column
+                padding: 40px 40px 40px 40px
+                background-color: #fff
+                margin: 40px 40px 40px 0px
+                border-radius: 4px
+                transition: 0.4s
+
+                .inner-list
+                    height: 100%
+                    display: flex
+                    flex-direction: column
                     align-items: stretch
 
-                    .bar
+                    .material-icons
+                        color: #9cbcf8
+                        font-size: 70px
+                        height: 38%
+
+                    .serivce-name
+                        display: flex
+                        flex-direction: column
+                        height: 38%
+                        font-size: 30px
+                        h3
+                            margin: 0px
+
+                    a
+                        margin-top: 20px
+
+                    .learn-more
+                        text-decoration: none
+                        display: flex
+                        position: relative
+                        p
+                            display: flex
+                            color: #7E7E7E
+                            font-size: 20px
+                            font-weight: 500
+                        .learn-more-arrow
+                            content: ""
+                            width: 15px
+                            height: 2px
+                            background-color: #7E7E7E
+                            position: absolute
+                            left: 110px
+                            bottom: 30px
+                            transition: width 0.4s
+
+                        .learn-more-arrow:after
+                            display: inline
+                            content: ""
+                            width: 8px
+                            height: 2px
+                            background-color: #7E7E7E
+                            transform: rotate(45deg)
+                            position: absolute
+                            left: 10px
+                            bottom: 3px
+                            transition: left 0.4s
+                        .learn-more-arrow:before
+                            display: inline
+                            content: ""
+                            width: 8px
+                            height: 2px
+                            background-color: #7E7E7E
+                            transform: rotate(-45deg)
+                            position: absolute
+                            left: 10px
+                            top: 3px
+                            transition: left 0.4s
+
+        .service-content:hover
+            background-color: #0a0a0a
+            color: #fbfbfb
+            .inner-list
+                .learn-more
+                    p
+                        color: #fbfbfb
+                    .learn-more-arrow
+                        background-color: #fbfbfb
+                        width: 40px
+                        //based on the width increment, 40-15
+                    .learn-more-arrow:before
+                        background-color: #fbfbfb
+                        left: 35px//based on the width increment
+                    .learn-more-arrow:after
+                        background-color: #fbfbfb
+                        left: 35px
+    //protofilo
+
+    .portfolio-page
+        flex-grow: 1
+        padding: 100px 0px 100px 40px
+        z-index: 1
+        display: flex
+        flex-direction: column
+
+        .portfolio-title
+            padding-left: 40px
+            h3
+                font-size: 60px
+                font-weight: bolder
+                color: #1A1A1A
+            p
+                font-family: "Poppins"
+                font-size: 18px
+                line-height: 30px
+                letter-spacing: 0px
+                word-wrap: break-word
+                color: #7e7e7e
+
+        .carousel-inner
+            //carousel container
+            width: 94%
+            margin: 50px auto
+            position: relative
+            overflow: visible
+            margin-left: 0px
+            padding-left: 40px
+
+            .portfolio-carousel-inner
+                overflow: hidden
+
+                .portfolio-list
+                    //track
+                    display: flex
+                    flex-direction: row
+                    list-style-type: none
+                    // align-items: center 
+                    margin-bottom: 0
+                    padding-left: 0
+                    transition: transform 0.3s
+                    .portfolio-content
+                        //card-container
+                        border-radius: 20px
+                        width: 33.5% //calculate by carousel container, if it keeps three in screen, the 1280px is divided by 3
+                        height: 500px
+                        flex-shrink: 0 //adjust the box that card won't shrink when the content is filled, it is going to be visiable
+                        padding-right: 25px
+                        box-sizing: border-box
+
+                        .portfolio-inner-list
+                            //card
+                            width: 99%
+                            height: 100%
+                            box-sizing: border-box
+                            border-radius: 10px
+                            display: flex
+                            flex-direction: column
+                            justify-items: stretch
+                            .img-frame
+                                border-radius: 20px
+                                overflow: hidden
+                                .portofolio-example
+                                    width: 100%
+                                    border-radius: 20px
+                                    transition: 0.3s
+                                .portofolio-example:hover
+                                    transform: scale(1.2)
+                            h3
+                                font-family: "Poppins"
+                                font-size: 20px
+                                margin-top: 15px
+                                margin-bottom: 15px
+                            p
+
+                                font-family: "Poppins"
+                                font-size: 16px
+                                color: #777
+        .carousel-nav
+            opacity: 0.7
+            button
+                width: 80px
+                height: 80px
+                border-radius: 50%
+                border: 1px solid #aaa
+                position: absolute
+            .prev
+                left: 5px
+                bottom: 260px
+            .next
+                bottom: 260px
+                left: 97%
+
+        .prev:hover
+            background-color: #292929
+            .material-icons
+                color: #fff
+        .next:hover
+            background-color: #292929
+            .material-icons
+                color: #fff
+
+    //Testminonial
+    .testimonial-page
+        background-color: #F9F9FC
+        flex-grow: 1
+        padding: 100px 0px 90px 40px
+        z-index: 1
+        display: flex
+        flex-direction: column
+
+        .testimonial-title
+            padding-left: 40px
+            h3
+                font-size: 60px
+                font-weight: bolder
+                color: #1A1A1A
+            p
+                font-family: "Poppins"
+                font-size: 18px
+                line-height: 30px
+                letter-spacing: 0px
+                word-wrap: break-word
+                color: #7e7e7e
+
+        .testimonial-carousel
+            //carousel container
+            width: 92%
+            margin: 50px auto
+            min-height: 200px
+            position: relative
+            overflow: visible
+            margin-left: 35px
+            margin-right: 0px
+
+            .testimonial-carousel-inner
+                overflow: hidden
+
+                .testimonial-carousel-inner-list
+                    //track
+                    display: flex
+                    flex-direction: row
+                    list-style-type: none
+                    // align-items: center 
+                    margin-bottom: 0
+                    padding-left: 0
+                    transition: transform 0.3s
+                    .testimonial-carousel-inner-list-content
+                        //card-container
+                        width: 51% //calculate by carousel container, if it keeps two in screen, the 1280px is divided by 2
+                        height: 350px
+                        flex-shrink: 0 //adjust the box that card won't shrink when the content is filled, it is going to be visiable
+                        padding-right: 30px
+                        box-sizing: border-box
+
+                        .testimonial-carousel-inner-list-content-card
+                            //card
+                            width: 96%
+                            height: 100%
+                            background-color: #fff
+                            box-sizing: border-box
+                            display: flex
+                            flex-direction: column
+                            padding-right: 30px
+                            //card here
+                            .testimonial-carousel-inner-list-content-card-inner
+                                display: flex
+                                justify-content: stretch
+                                img
+                                    width: 130px
+                                    height: 130px
+                                    margin-left: 50px
+                                    margin-top: 50px
+                                    border-radius: 10px
+                                .p-title
+                                    display: flex
+                                    flex-direction: column
+                                    margin-left: 30px
+                                    margin-top: 40px
+                                    .p-name
+                                        font-size: 20px
+                                        font-weight: bold
+                                        color: #272727
+                                    .p-intro
+                                        font-size: 15px
+                                        color: #7e7e7e
+                                        margin-top: 2px
+                                svg
+                                    margin-left: 160px
+                                    margin-top: 80px
+                            p
+                                margin-top: 30px
+                                word-wrap: break-word
+                                margin-left: 42px
+                                font-size: 18px
+                                color: #7e7e7e
+
+        .testimonial-carousel-nav
+            margin-top: 40px
+            display: block
+            text-align: center
+            margin-right: 8px
+
+        .testimonial-carousel-nav button:hover
+            background-color: #fff
+            border-color: #000000
+
+        .testimonial-carousel-nav button
+            width: 15px
+            height: 15px
+            border-radius: 50%
+            border: 1px solid #aaa
+            background-color: #888888
+    //blog
+    .blog-page
+        flex-grow: 1
+        padding: 100px 0px 100px 20px
+        z-index: 1
+        h3
+            font-size: 60px
+            font-weight: bolder
+            color: #1A1A1A
+            padding-left: 60px
+        p
+            font-family: "Poppins"
+            font-size: 28px
+            line-height: 30px
+            letter-spacing: 0px
+            word-wrap: break-word
+            color: #7e7e7e
+            padding-left: 60px
+
+    //contact
+    .contact-page
+        background-color: #F9F9FC
+        display: flex
+        flex-grow: 1
+        padding: 100px 0px 100px 0px
+        flex-direction: column
+        min-height: 100vh
+
+        .contact-page-container
+            list-style: none
+            display: flex
+            flex-wrap: wrap
+            flex-direction: column
+            flex-grow: 1
+            align-items: stretch
+            margin: 100px 40px 40px 40px
+            .contact-page-container-row-title
+                word-wrap: break-word
+                h3
+                    font-size: 60px
+                    font-weight: bolder
+                    color: #1A1A1A
+                p
+                    font-family: "Poppins"
+                    font-size: 28px
+                    line-height: 30px
+                    letter-spacing: 0px
+                    word-wrap: break-word
+                    color: #7e7e7e
+                    margin-bottom: 10px
+            .contact-page-container-row
+                margin-top: 40px
+                display: flex
+                flex-direction: column
+                flex-wrap: wrap
+
+                .contact-page-container-col
+                    display: flex
+                    flex-direction: row
+                    flex-wrap: wrap
+
+                    .card
                         flex: 1
-                        margin: 10px
+                        margin-left: 5px
+                        display: inline-block
+                        border-style: none
+                        border-radius: 2px
 
-                    .submit-bar
-                        margin: 10px
-                        width: 100px
+                    .contact-input
+                        flex: 1
+                        display: flex
+                        flex-direction: column
+                        margin-right: 50px
+                        align-items: stretch
 
-                .position-map
-                    flex: 1
+                        .bar
+                            flex: 1
+                            margin: 10px
 
-    /* Style the submit button with a specific background color etc */
-    input[type=submit]
-        background-color: #04AA6D
-        color: white
-        padding: 12px 20px
-        border: none
-        border-radius: 4px
-        cursor: pointer
+                        .submit-bar
+                            margin: 10px
+                            width: 100px
 
-    /* When moving the mouse over the submit button, add a darker green color */
-    input[type=submit]:hover
-        background-color: #45a049
+                    .position-map
+                        flex: 1
 
-    input[type=query]
-        border: none
-        border-bottom: 2px solid #c2c2c2
-        outline: none
+        /* Style the submit button with a specific background color etc */
+        input[type=submit]
+            background-color: #04AA6D
+            color: white
+            padding: 12px 20px
+            border: none
+            border-radius: 4px
+            cursor: pointer
+
+        /* When moving the mouse over the submit button, add a darker green color */
+        input[type=submit]:hover
+            background-color: #45a049
+
+        input[type=query]
+            border: none
+            border-bottom: 2px solid #c2c2c2
+            outline: none

@@ -9,6 +9,9 @@
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
     <title>P1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <style type="text/css">
         /* Set the size of the div element that contains the map */
         #map {
@@ -38,6 +41,8 @@
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="responsive.css">
+    
 </head>
 
 <body>
@@ -143,442 +148,516 @@
         </div>
 
     </nav>
-    <main class="web-context">
-        <a href="javascript:void(0);" id="nav-icon">
-            <i class="fa fa-bars"></i>
-            <nav id="responsive">
-                <a class="responsive-button" href="#home">Home</a>
-                <a class="responsive-button" href="#about">About</a>
-                <a class="responsive-button" href="#service">Service</a>
-                <a class="responsive-button" href="#protfolio">Protfolio</a>
-                <a class="responsive-button" href="#testminonial">Testminonial</a>
-                <a class="responsive-button" href="#blog">Blog</a>
-                <a class="responsive-button" href="#contact">Contact</a>
-            </nav>
-        </a>
-        <script>
-            var x = document.getElementById("nav-icon");
-            var r = document.getElementById("responsive");
-            var b = document.getElementsByClassName("responsive-button");
-            var w = screen.width;
-            var count = 0;
-            //adjust window it will disappear
-            if (w > 600) {
+    <nav class="navbar navbar-inverse fixed-top navbar-expand-sm" role="banner">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+             <p><span>M</span>eg</p>
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon""></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link" href="#service">Service</a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link" href="#protfolio">Protfilo</a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link" href="#testminonial">Testminonial</a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link" href="#blog">Blog</a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!-- <a href="javascript:void(0);" id="nav-icon">
+        <i class="fa fa-bars"></i>
+        <nav id="responsive">
+            <a class="responsive-button" href="#home">
+                <p>Home</p>
+            </a>
+            <a class="responsive-button" href="#about">
+                <p>About</p>
+            </a>
+            <a class="responsive-button" href="#service">
+                <p>Service</p>
+            </a>
+            <a class="responsive-button" href="#protfolio">
+                <p>Protfolio</p>
+            </a>
+            <a class="responsive-button" href="#testminonial">
+                <p>Testminonial</p>
+            </a>
+            <a class="responsive-button" href="#blog">
+                <p>Blog</p>
+            </a>
+            <a class="responsive-button" href="#contact">
+                <p>Contact</p>
+            </a>
+        </nav>
+    </a> -->
+    <!-- <script>
+        var x = document.getElementById("hamburger-bar");
+        var r = document.getElementById("responsive");
+        var b = document.getElementsByClassName("responsive-button");
+        var w = screen.width;
+        var count = 0;
+        //adjust window it will disappear
+        if (w > 600) {
+            r.style.display = "none";
+        }
+
+        for (var i = 0; i < b.length; i++) {
+            b[i].addEventListener('click', () => {
                 r.style.display = "none";
-            }
-
-            for (var i = 0; i < b.length; i++) {
-                b[i].addEventListener('click', () => {
-                    r.style.display = "none";
-                    r.style.fontSize = "0%";
-                    //back to zero because the menu back
-                    count--;
-                })
-            }
-
-            x.addEventListener('click', () => {
-                if (count < 1) {
-                    //click first time
-                    r.style.display = "flex";
-                    r.style.flexDirection = "column";
-                    r.style.position = "fixed";
-                    r.style.top = "20px";
-                    r.style.fontSize = "100%";
-                    console.log(document.getElementById("responsive"));
-                    count++
-                } else {
-                    //click second time
-                    r.style.display = "none";
-                    count--;
-                }
+                r.style.fontSize = "0%";
+                //back to zero because the menu back
+                count--;
             })
+        }
 
-        </script>
+        x.addEventListener('click', () => {
+            if (count < 1) {
+                //click first time
+                r.style.display = "flex";
+                r.style.flexDirection = "column";
+                r.style.position = "fixed";
+                r.style.top = "20px";
+                r.style.fontSize = "100%";
+                console.log(document.getElementById("responsive"));
+                count++;
+            } else {
+                //click second time
+                r.style.display = "none";
+                count--;
+            }
+        })
+
+    </script> -->
+    <main class="web-context">
         <!-- home -->
-        <div class="home-page" id="home">
-            <div class="content">
-                <div class="frame">
-                    <img class="image-content" src="imgs\content\home-selfie.jpg" alt="home-selfie">
-                </div>
-                <h3 class="person-name">Davide Santon</h3>
-                <p class="love-sentence">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                <p class="love-sentence">Volut purus ut eratmus.pendisse aliquam.</p>
-                <div class="social-media-frame">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-linkedin"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-instagram"></a>
+        <div class="container-fluid">
+            <div class="home-page" id="home">
+                <div class="content">
+                    <div class="frame">
+                        <img class="image-content" src="imgs\content\home-selfie.jpg" alt="home-selfie">
+                    </div>
+                    <h3 class="person-name">Davide Santon</h3>
+                    <p class="love-sentence">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                    <p class="love-sentence">Volut purus ut eratmus.pendisse aliquam.</p>
+                    <div class="social-media-frame">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- about -->
-        <div class="about-page" id="about">
-            <div class="content">
-                <div class="top-content">
-                    <h3 class="about-title">About Me</h3>
-                    <ul class="introduction">
-                        <li class="brief-intro">Hi, I'm <span>Rogers Nelson</span></li>
-                        <li>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet
-                                egestas
-                                tellus.Eu leo morbi massa sem faucibus nulla gravida arcu ante sollicitudin orci nunc
-                                gravida.
-                            </p>
-                        </li>
-                        <li class="skill">What is my skill level?</li>
-                        <li>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet
-                                egestas tellus.
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bottom-content">
-                    <!-- <img style="height: 650px; width: 500px;" src="imgs\about\2.jpg"> -->
-                    <div class="experience">
-                        <h3>6+ Years <span> Of experience</span></h3>
+        <div class="container-fluid">
+            <div class="about-page" id="about">
+                <h3 class="about-title">About Me</h3>
+                <div class="content">
+                    <div class="top-content">
+                        <ul class="introduction">
+                            <li class="brief-intro">Hi, I'm <span>Rogers Nelson</span></li>
+                            <li>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet
+                                    egestas
+                                    tellus.Eu leo morbi massa sem faucibus nulla gravida arcu ante sollicitudin orci
+                                    nunc
+                                    gravida.
+                                </p>
+                            </li>
+                            <li class="skill">What is my skill level?</li>
+                            <li>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet
+                                    egestas tellus.
+                                </p>
+                            </li>
+                        </ul>
                     </div>
-                    <img src="imgs\content\home-selfie.jpg">
+
+
+                    <div class="bottom-content">
+                        <!-- <img style="height: 650px; width: 500px;" src="imgs\about\2.jpg"> -->
+                        <div class="experience">
+                            <h3>6+ Years <span> Of experience</span></h3>
+                        </div>
+                        <img src="imgs\content\home-selfie.jpg">
+                    </div>
                 </div>
             </div>
         </div>
         <!-- service -->
-        <div class="service-page" id="service">
-            <div class="service-title">
-                <h3> What I Do</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>Mauris ipsum sit nibh amet egestas tellus.</p>
-            </div>
-            <ul class="service-list">
-                <li class="service-content">
-                    <div class="inner-list">
-                        <!-- <img class="service-icon" src="imgs\service\example-icon.png" alt="inner-list-icon"
-                            style="width: 50px; height: 50px;"> -->
-                        <span class="material-icons">assessment</span>
-                        <div class="serivce-name">
-                            <h3>Serivce</h3>
-                            <h3>Tiltle</h3>
-                        </div>
-                        <a class="learn-more" href="#">
-                            <p>Learn more</p>
-                            <span class="learn-more-arrow"></span>
-                        </a>
-                    </div>
-                </li>
-                <li class="service-content">
-                    <div class="inner-list">
-                        <span class="material-icons">travel_explore</span>
-                        <!-- <img class="service-icon" src="imgs\service\example-icon.png" alt="inner-list-icon"
-                            style="width: 50px; height: 50px;"> -->
-                        <div class="serivce-name">
-                            <h3>Serivce</h3>
-                            <h3>Tiltle</h3>
-                        </div>
-                        <a class="learn-more" href="#">
-                            <p>Learn more</p>
-                            <span class="learn-more-arrow"></span>
-                        </a>
-                    </div>
-                </li>
-                <li class="service-content">
-                    <div class="inner-list">
-                        <span class="material-icons">emoji_objects </span>
-                        <!-- <img class="service-icon" src="imgs\service\example-icon.png" alt="inner-list-icon"
-                            style="width: 50px; height: 50px;"> -->
-                        <div class="serivce-name">
-                            <h3>Serivce</h3>
-                            <h3>Tiltle</h3>
-                        </div>
-                        <a class="learn-more" href="#">
-                            <p>Learn more</p>
-                            <span class="learn-more-arrow"></span>
-                        </a>
-                    </div>
-                </li>
-                <li class="service-content">
-                    <div class="inner-list">
-                        <span class="material-icons">account_tree</span>
-                        <!-- <img class="service-icon" src="imgs\service\example-icon.png" alt="inner-list-icon"
-                            style="width: 50px; height: 50px;"> -->
-                        <div class="serivce-name">
-                            <h3>Serivce</h3>
-                            <h3>Tiltle</h3>
-                        </div>
-                        <a class="learn-more" href="#">
-                            <p>Learn more</p>
-                            <span class="learn-more-arrow"></span>
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <!-- portofilo -->
-        <div class="portfolio-page" id="protfolio">
-            <div class="portfolio-title">
-                <h3> Portfolio</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>Mauris ipsum sit nibh amet egestas tellus.</p>
-            </div>
-            <div class="carousel-inner">
-                <div class="portfolio-carousel-inner">
-                    <ul class="portfolio-list">
-                        <li class="portfolio-content">
-                            <div class="portfolio-inner-list">
-                                <div class="img-frame">
-                                    <img class="portofolio-example" src="imgs\content\home-selfie.jpg">
-                                </div>
-                                <h3 class="portfolio-name">Mury moya</h3>
-                                <p>sounland</p>
-                            </div>
-                        </li>
-                        <li class="portfolio-content">
-                            <div class="portfolio-inner-list">
-                                <div class="img-frame">
-                                    <img class="portofolio-example" src="imgs\content\home-selfie.jpg">
-                                </div>
-                                <h3 class="portfolio-name">Mury moya</h3>
-                                <p>sounland</p>
-                            </div>
-                        </li>
-                        <li class="portfolio-content">
-                            <div class="portfolio-inner-list">
-                                <div class="img-frame">
-                                    <img class="portofolio-example" src="imgs\content\home-selfie.jpg">
-                                </div>
-                                <h3 class="portfolio-name">Mury moya</h3>
-                                <p>sounland</p>
-                            </div>
-                        </li>
-                        <li class="portfolio-content">
-                            <div class="portfolio-inner-list">
-                                <div class="img-frame">
-                                    <img class="portofolio-example" src="imgs\content\home-selfie.jpg">
-                                </div>
-                                <h3 class="portfolio-name">Mury moya</h3>
-                                <p>sounland</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="carousel-nav">
-                    <button class="prev">
-                        <span class="material-icons">
-                            west
-                        </span>
-                    </button>
-                    <button class="next">
-                        <span class="material-icons">
-                            east
-                        </span>
-                    </button>
-                </div>
-            </div>
-            <script>
-                const next = document.querySelector('.next');
-                const prev = document.querySelector('.prev');
-                const track = document.querySelector('.portfolio-list');
-                const containerWidth = document.querySelector('.carousel-inner').offsetWidth;
-                // const dot1 = document.querySelector('.dot1');
-                next.addEventListener('click', () => {
-                    track.style.transform = 'translateX(-454px)';
-                })
-
-                prev.addEventListener('click', () => {
-                    track.style.transform = 'translateX(' + 0 + 'px)';
-                })
-            </script>
-        </div>
-        <!-- testimonial -->
-        <div class="testimonial-page" id="testminonial">
-            <div class="testimonial-title">
-                <h3>Testimonial</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                <p>Mauris ipsum sit nibh amet egestas tellus.</p>
-            </div>
-            <div class="testimonial-carousel">
-                <div class="testimonial-carousel-inner">
-                    <ul class="testimonial-carousel-inner-list">
-                        <li class="testimonial-carousel-inner-list-content">
-                            <div class="testimonial-carousel-inner-list-content-card">
-                                <div class="testimonial-carousel-inner-list-content-card-inner">
-                                    <img src="imgs\content\home-selfie.jpg">
-                                    <div class="p-title">
-                                        <p class="p-name">Sound Cloud</p>
-                                        <p class="p-intro">Manager</p>
-                                    </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="89" viewBox="0 0 100 89"
-                                        fill="none" class="svg replaced-svg">
-                                        <path
-                                            d="M90.625 44.5H75V32C75 25.1641 80.4688 19.5 87.5 19.5H89.0625C91.6016 19.5 93.75 17.5469 93.75 14.8125V5.4375C93.75 2.89844 91.6016 0.75 89.0625 0.75H87.5C70.1172 0.75 56.25 14.8125 56.25 32V78.875C56.25 84.1484 60.3516 88.25 65.625 88.25H90.625C95.7031 88.25 100 84.1484 100 78.875V53.875C100 48.7969 95.7031 44.5 90.625 44.5ZM34.375 44.5H18.75V32C18.75 25.1641 24.2188 19.5 31.25 19.5H32.8125C35.3516 19.5 37.5 17.5469 37.5 14.8125V5.4375C37.5 2.89844 35.3516 0.75 32.8125 0.75H31.25C13.8672 0.75 0 14.8125 0 32V78.875C0 84.1484 4.10156 88.25 9.375 88.25H34.375C39.4531 88.25 43.75 84.1484 43.75 78.875V53.875C43.75 48.7969 39.4531 44.5 34.375 44.5Z"
-                                            fill="url(#paint0_linear)"></path>
-                                        <defs>
-                                            <linearGradient id="paint0_linear" x1="50" y1="-13" x2="50" y2="102"
-                                                gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#34495E" stop-opacity="0.5"></stop>
-                                                <stop offset="1" stop-color="#FFF2F5" stop-opacity="0"></stop>
-                                            </linearGradient>
-                                        </defs>
-                                    </svg>
-                                </div>
-                                <p>Hi,I’m Hasan Bond and I am designer & developer who dream making the world better place by products. I am also very active for international clients.</p>
-                            </div>
-                        </li>
-                        <li class="testimonial-carousel-inner-list-content">
-                            <div class="testimonial-carousel-inner-list-content-card">
-                                <div class="testimonial-carousel-inner-list-content-card-inner">
-                                    <img src="imgs\content\home-selfie.jpg">
-                                    <div class="p-title">
-                                        <p class="p-name">Sound Cloud</p>
-                                        <p class="p-intro">Manager</p>
-                                    </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="89" viewBox="0 0 100 89"
-                                        fill="none" class="svg replaced-svg">
-                                        <path
-                                            d="M90.625 44.5H75V32C75 25.1641 80.4688 19.5 87.5 19.5H89.0625C91.6016 19.5 93.75 17.5469 93.75 14.8125V5.4375C93.75 2.89844 91.6016 0.75 89.0625 0.75H87.5C70.1172 0.75 56.25 14.8125 56.25 32V78.875C56.25 84.1484 60.3516 88.25 65.625 88.25H90.625C95.7031 88.25 100 84.1484 100 78.875V53.875C100 48.7969 95.7031 44.5 90.625 44.5ZM34.375 44.5H18.75V32C18.75 25.1641 24.2188 19.5 31.25 19.5H32.8125C35.3516 19.5 37.5 17.5469 37.5 14.8125V5.4375C37.5 2.89844 35.3516 0.75 32.8125 0.75H31.25C13.8672 0.75 0 14.8125 0 32V78.875C0 84.1484 4.10156 88.25 9.375 88.25H34.375C39.4531 88.25 43.75 84.1484 43.75 78.875V53.875C43.75 48.7969 39.4531 44.5 34.375 44.5Z"
-                                            fill="url(#paint0_linear)"></path>
-                                        <defs>
-                                            <linearGradient id="paint0_linear" x1="50" y1="-13" x2="50" y2="102"
-                                                gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#34495E" stop-opacity="0.5"></stop>
-                                                <stop offset="1" stop-color="#FFF2F5" stop-opacity="0"></stop>
-                                            </linearGradient>
-                                        </defs>
-                                    </svg>
-                                </div>
-                                <p>Hi,I’m Hasan Bond and I am designer & developer who dream making the world better place by products. I am also very active for international clients.</p>
-                            </div>
-
-                        <li class="testimonial-carousel-inner-list-content">
-                            <div class="testimonial-carousel-inner-list-content-card">
-                                <div class="testimonial-carousel-inner-list-content-card-inner">
-                                    <img src="imgs\content\home-selfie.jpg">
-                                    <div class="p-title">
-                                        <p class="p-name">Sound Cloud</p>
-                                        <p class="p-intro">Manager</p>
-                                    </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="89" viewBox="0 0 100 89"
-                                        fill="none" class="svg replaced-svg">
-                                        <path
-                                            d="M90.625 44.5H75V32C75 25.1641 80.4688 19.5 87.5 19.5H89.0625C91.6016 19.5 93.75 17.5469 93.75 14.8125V5.4375C93.75 2.89844 91.6016 0.75 89.0625 0.75H87.5C70.1172 0.75 56.25 14.8125 56.25 32V78.875C56.25 84.1484 60.3516 88.25 65.625 88.25H90.625C95.7031 88.25 100 84.1484 100 78.875V53.875C100 48.7969 95.7031 44.5 90.625 44.5ZM34.375 44.5H18.75V32C18.75 25.1641 24.2188 19.5 31.25 19.5H32.8125C35.3516 19.5 37.5 17.5469 37.5 14.8125V5.4375C37.5 2.89844 35.3516 0.75 32.8125 0.75H31.25C13.8672 0.75 0 14.8125 0 32V78.875C0 84.1484 4.10156 88.25 9.375 88.25H34.375C39.4531 88.25 43.75 84.1484 43.75 78.875V53.875C43.75 48.7969 39.4531 44.5 34.375 44.5Z"
-                                            fill="url(#paint0_linear)"></path>
-                                        <defs>
-                                            <linearGradient id="paint0_linear" x1="50" y1="-13" x2="50" y2="102"
-                                                gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#34495E" stop-opacity="0.5"></stop>
-                                                <stop offset="1" stop-color="#FFF2F5" stop-opacity="0"></stop>
-                                            </linearGradient>
-                                        </defs>
-                                    </svg>
-                                </div>
-                                <p>Hi,I’m Hasan Bond and I am designer & developer who dream making the world better place by products. I am also very active for international clients.</p>
-                            </div>
-                        </li>
-                        <li class="testimonial-carousel-inner-list-content">
-                            <div class="testimonial-carousel-inner-list-content-card">
-                                <div class="testimonial-carousel-inner-list-content-card-inner">
-                                    <img src="imgs\content\home-selfie.jpg">
-                                    <div class="p-title">
-                                        <p class="p-name">Sound Cloud</p>
-                                        <p class="p-intro">Manager</p>
-                                    </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="89" viewBox="0 0 100 89"
-                                        fill="none" class="svg replaced-svg">
-                                        <path
-                                            d="M90.625 44.5H75V32C75 25.1641 80.4688 19.5 87.5 19.5H89.0625C91.6016 19.5 93.75 17.5469 93.75 14.8125V5.4375C93.75 2.89844 91.6016 0.75 89.0625 0.75H87.5C70.1172 0.75 56.25 14.8125 56.25 32V78.875C56.25 84.1484 60.3516 88.25 65.625 88.25H90.625C95.7031 88.25 100 84.1484 100 78.875V53.875C100 48.7969 95.7031 44.5 90.625 44.5ZM34.375 44.5H18.75V32C18.75 25.1641 24.2188 19.5 31.25 19.5H32.8125C35.3516 19.5 37.5 17.5469 37.5 14.8125V5.4375C37.5 2.89844 35.3516 0.75 32.8125 0.75H31.25C13.8672 0.75 0 14.8125 0 32V78.875C0 84.1484 4.10156 88.25 9.375 88.25H34.375C39.4531 88.25 43.75 84.1484 43.75 78.875V53.875C43.75 48.7969 39.4531 44.5 34.375 44.5Z"
-                                            fill="url(#paint0_linear)"></path>
-                                        <defs>
-                                            <linearGradient id="paint0_linear" x1="50" y1="-13" x2="50" y2="102"
-                                                gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#34495E" stop-opacity="0.5"></stop>
-                                                <stop offset="1" stop-color="#FFF2F5" stop-opacity="0"></stop>
-                                            </linearGradient>
-                                        </defs>
-                                    </svg>
-                                </div>
-                                <p>Hi,I’m Hasan Bond and I am designer & developer who dream making the world better place by products. I am also very active for international clients.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="testimonial-carousel-nav">
-                    <button class="dot-1"></button>
-                    <button class="dot-2"></button>
-                    <button class="dot-3"></button>
-                </div>
-            </div>
-            <script>
-                const dot1 = document.querySelector('.dot-1');
-                const dot2 = document.querySelector('.dot-2');
-                const dot3 = document.querySelector('.dot-3');
-                const trackDot = document.querySelector('.testimonial-carousel-inner-list');
-                const contarinerDotWidth = document.querySelector('.testimonial-carousel').offsetWidth;
-                dot1.addEventListener('click', () => {
-                    trackDot.style.transform = 'translateX(0px)';
-                })
-                dot2.addEventListener('click', () => {
-                    trackDot.style.transform = 'translateX(-' + (containerWidth*10/11) / 2 + 'px)';
-                })
-
-                dot3.addEventListener('click', () => {
-                    trackDot.style.transform = 'translateX(-' + containerWidth*19/20 + 'px)';//border distance
-                })
-            </script>
-        </div>
-        <!-- blog -->
-        <div class="blog-page" id="blog">
-            <h3>Blog</h3>
-            <p>Coming soon</p>
-        </div>
-        <!-- contact -->
-        <div class="contact-page" id="contact">
-            <ul class="contact-page-container">
-                <li class="contact-page-container-row-title">
-                    <h3>Contact</h3>
+        <div class="container-fluid">
+            <div class="service-page" id="service">
+                <div class="service-title">
+                    <h3> What I Do</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <p>Mauris ipsum sit nibh amet egestas tellus.</p>
-                </li>
-                <li class="contact-page-container-row">
-                    <div class="contact-page-container-col">
-                        <div class="card">
-                            <h3>Phone:</h3>
-                            <p>+452 666 386</p>
-                            <p>+465 562 226</p>
+                </div>
+                <ul class="service-list">
+                    <li class="service-content">
+                        <div class="inner-list">
+                            <!-- <img class="service-icon" src="imgs\service\example-icon.png" alt="inner-list-icon"
+                                style="width: 50px; height: 50px;"> -->
+                            <span class="material-icons">assessment</span>
+                            <div class="serivce-name">
+                                <h3>Serivce</h3>
+                                <h3>Tiltle</h3>
+                            </div>
+                            <a class="learn-more" href="#">
+                                <p>Learn more</p>
+                                <span class="learn-more-arrow"></span>
+                            </a>
                         </div>
-                        <div class="card">
-                            <h3>Email:</h3>
-                            <p>support@gmail.com</p>
-                            <p>example@support.com</p>
+                    </li>
+                    <li class="service-content">
+                        <div class="inner-list">
+                            <span class="material-icons">travel_explore</span>
+                            <!-- <img class="service-icon" src="imgs\service\example-icon.png" alt="inner-list-icon"
+                                style="width: 50px; height: 50px;"> -->
+                            <div class="serivce-name">
+                                <h3>Serivce</h3>
+                                <h3>Tiltle</h3>
+                            </div>
+                            <a class="learn-more" href="#">
+                                <p>Learn more</p>
+                                <span class="learn-more-arrow"></span>
+                            </a>
                         </div>
-                        <div class="card">
-                            <h3>Address:</h3>
-                            <p>Maount View, Oval Road</p>
-                            <p>New York, USA</p>
+                    </li>
+                    <li class="service-content">
+                        <div class="inner-list">
+                            <span class="material-icons">emoji_objects </span>
+                            <!-- <img class="service-icon" src="imgs\service\example-icon.png" alt="inner-list-icon"
+                                style="width: 50px; height: 50px;"> -->
+                            <div class="serivce-name">
+                                <h3>Serivce</h3>
+                                <h3>Tiltle</h3>
+                            </div>
+                            <a class="learn-more" href="#">
+                                <p>Learn more</p>
+                                <span class="learn-more-arrow"></span>
+                            </a>
                         </div>
-                    </div>
-                </li>
-                <li class="contact-page-container-row">
-                    <div class="contact-page-container-col">
-                        <div class="contact-input">
-                            <h3 class="bar">I'm always open to discussing product<span>design work or
-                                    partnerships.</span>
-                            </h3>
-                            <input class="bar" type="query" placeholder="Name*">
-                            <input class="bar" type="query" placeholder="Email*">
-                            <input class="bar" type="query" placeholder="Message*">
-                            <input class="submit-bar" type="submit" value="Submit">
+                    </li>
+                    <li class="service-content">
+                        <div class="inner-list">
+                            <span class="material-icons">account_tree</span>
+                            <!-- <img class="service-icon" src="imgs\service\example-icon.png" alt="inner-list-icon"
+                                style="width: 50px; height: 50px;"> -->
+                            <div class="serivce-name">
+                                <h3>Serivce</h3>
+                                <h3>Tiltle</h3>
+                            </div>
+                            <a class="learn-more" href="#">
+                                <p>Learn more</p>
+                                <span class="learn-more-arrow"></span>
+                            </a>
                         </div>
-                        <div class="position-map">
-                            <div id="map"></div>
-                            <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-                            <script
-                                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCO8yqjaAekCpapGPud204Q8e3d-Z4icro&callback=initMap&libraries=&v=weekly"
-                                async>
-                                </script>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
+        <!-- portofilo -->
+        <div class="container-fluid">
+            <div class="portfolio-page" id="protfolio">
+                <div class="portfolio-title">
+                    <h3> Portfolio</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Mauris ipsum sit nibh amet egestas tellus.</p>
+                </div>
+                <div class="carousel-inner">
+                    <div class="portfolio-carousel-inner">
+                        <ul class="portfolio-list">
+                            <li class="portfolio-content">
+                                <div class="portfolio-inner-list">
+                                    <div class="img-frame">
+                                        <img class="portofolio-example" src="imgs\content\home-selfie.jpg">
+                                    </div>
+                                    <h3 class="portfolio-name">Mury moya</h3>
+                                    <p>sounland</p>
+                                </div>
+                            </li>
+                            <li class="portfolio-content">
+                                <div class="portfolio-inner-list">
+                                    <div class="img-frame">
+                                        <img class="portofolio-example" src="imgs\content\home-selfie.jpg">
+                                    </div>
+                                    <h3 class="portfolio-name">Mury moya</h3>
+                                    <p>sounland</p>
+                                </div>
+                            </li>
+                            <li class="portfolio-content">
+                                <div class="portfolio-inner-list">
+                                    <div class="img-frame">
+                                        <img class="portofolio-example" src="imgs\content\home-selfie.jpg">
+                                    </div>
+                                    <h3 class="portfolio-name">Mury moya</h3>
+                                    <p>sounland</p>
+                                </div>
+                            </li>
+                            <li class="portfolio-content">
+                                <div class="portfolio-inner-list">
+                                    <div class="img-frame">
+                                        <img class="portofolio-example" src="imgs\content\home-selfie.jpg">
+                                    </div>
+                                    <h3 class="portfolio-name">Mury moya</h3>
+                                    <p>sounland</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="prev">
+                            <span class="material-icons">
+                                west
+                            </span>
+                        </button>
+                        <button class="next">
+                            <span class="material-icons">
+                                east
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <script>
+                    const next = document.querySelector('.next');
+                    const prev = document.querySelector('.prev');
+                    const track = document.querySelector('.portfolio-list');
+                    const containerWidth = document.querySelector('.portfolio-carousel-inner').offsetWidth;
+                    // const dot1 = document.querySelector('.dot1');
+                    next.addEventListener('click', () => {
+                        track.style.transform = 'translateX(-'+Math.round(containerWidth/3)+'px)';
+                    })
+
+                    prev.addEventListener('click', () => {
+                        track.style.transform = 'translateX(' + 0 + 'px)';
+                    })
+                </script>
+            </div>
+        </div>
+
+        <!-- testimonial -->
+        <div class="container-fluid">
+            <div class="testimonial-page" id="testminonial">
+                <div class="testimonial-title">
+                    <h3>Testimonial</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                    <p>Mauris ipsum sit nibh amet egestas tellus.</p>
+                </div>
+                <div class="testimonial-carousel">
+                    <div class="testimonial-carousel-inner">
+                        <ul class="testimonial-carousel-inner-list">
+                            <li class="testimonial-carousel-inner-list-content">
+                                <div class="testimonial-carousel-inner-list-content-card">
+                                    <div class="testimonial-carousel-inner-list-content-card-inner">
+                                        <img src="imgs\content\home-selfie.jpg">
+                                        <div class="p-title">
+                                            <p class="p-name">Sound Cloud</p>
+                                            <p class="p-intro">Manager</p>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="89"
+                                            viewBox="0 0 100 89" fill="none" class="svg replaced-svg">
+                                            <path
+                                                d="M90.625 44.5H75V32C75 25.1641 80.4688 19.5 87.5 19.5H89.0625C91.6016 19.5 93.75 17.5469 93.75 14.8125V5.4375C93.75 2.89844 91.6016 0.75 89.0625 0.75H87.5C70.1172 0.75 56.25 14.8125 56.25 32V78.875C56.25 84.1484 60.3516 88.25 65.625 88.25H90.625C95.7031 88.25 100 84.1484 100 78.875V53.875C100 48.7969 95.7031 44.5 90.625 44.5ZM34.375 44.5H18.75V32C18.75 25.1641 24.2188 19.5 31.25 19.5H32.8125C35.3516 19.5 37.5 17.5469 37.5 14.8125V5.4375C37.5 2.89844 35.3516 0.75 32.8125 0.75H31.25C13.8672 0.75 0 14.8125 0 32V78.875C0 84.1484 4.10156 88.25 9.375 88.25H34.375C39.4531 88.25 43.75 84.1484 43.75 78.875V53.875C43.75 48.7969 39.4531 44.5 34.375 44.5Z"
+                                                fill="url(#paint0_linear)"></path>
+                                            <defs>
+                                                <linearGradient id="paint0_linear" x1="50" y1="-13" x2="50" y2="102"
+                                                    gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#34495E" stop-opacity="0.5"></stop>
+                                                    <stop offset="1" stop-color="#FFF2F5" stop-opacity="0"></stop>
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <p>Hi,I’m Hasan Bond and I am designer & developer who dream making the world better
+                                        place by products. I am also very active for international clients.</p>
+                                </div>
+                            </li>
+                            <li class="testimonial-carousel-inner-list-content">
+                                <div class="testimonial-carousel-inner-list-content-card">
+                                    <div class="testimonial-carousel-inner-list-content-card-inner">
+                                        <img src="imgs\content\home-selfie.jpg">
+                                        <div class="p-title">
+                                            <p class="p-name">Sound Cloud</p>
+                                            <p class="p-intro">Manager</p>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="89"
+                                            viewBox="0 0 100 89" fill="none" class="svg replaced-svg">
+                                            <path
+                                                d="M90.625 44.5H75V32C75 25.1641 80.4688 19.5 87.5 19.5H89.0625C91.6016 19.5 93.75 17.5469 93.75 14.8125V5.4375C93.75 2.89844 91.6016 0.75 89.0625 0.75H87.5C70.1172 0.75 56.25 14.8125 56.25 32V78.875C56.25 84.1484 60.3516 88.25 65.625 88.25H90.625C95.7031 88.25 100 84.1484 100 78.875V53.875C100 48.7969 95.7031 44.5 90.625 44.5ZM34.375 44.5H18.75V32C18.75 25.1641 24.2188 19.5 31.25 19.5H32.8125C35.3516 19.5 37.5 17.5469 37.5 14.8125V5.4375C37.5 2.89844 35.3516 0.75 32.8125 0.75H31.25C13.8672 0.75 0 14.8125 0 32V78.875C0 84.1484 4.10156 88.25 9.375 88.25H34.375C39.4531 88.25 43.75 84.1484 43.75 78.875V53.875C43.75 48.7969 39.4531 44.5 34.375 44.5Z"
+                                                fill="url(#paint0_linear)"></path>
+                                            <defs>
+                                                <linearGradient id="paint0_linear" x1="50" y1="-13" x2="50" y2="102"
+                                                    gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#34495E" stop-opacity="0.5"></stop>
+                                                    <stop offset="1" stop-color="#FFF2F5" stop-opacity="0"></stop>
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <p>Hi,I’m Hasan Bond and I am designer & developer who dream making the world better
+                                        place by products. I am also very active for international clients.</p>
+                                </div>
+
+                            <li class="testimonial-carousel-inner-list-content">
+                                <div class="testimonial-carousel-inner-list-content-card">
+                                    <div class="testimonial-carousel-inner-list-content-card-inner">
+                                        <img src="imgs\content\home-selfie.jpg">
+                                        <div class="p-title">
+                                            <p class="p-name">Sound Cloud</p>
+                                            <p class="p-intro">Manager</p>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="89"
+                                            viewBox="0 0 100 89" fill="none" class="svg replaced-svg">
+                                            <path
+                                                d="M90.625 44.5H75V32C75 25.1641 80.4688 19.5 87.5 19.5H89.0625C91.6016 19.5 93.75 17.5469 93.75 14.8125V5.4375C93.75 2.89844 91.6016 0.75 89.0625 0.75H87.5C70.1172 0.75 56.25 14.8125 56.25 32V78.875C56.25 84.1484 60.3516 88.25 65.625 88.25H90.625C95.7031 88.25 100 84.1484 100 78.875V53.875C100 48.7969 95.7031 44.5 90.625 44.5ZM34.375 44.5H18.75V32C18.75 25.1641 24.2188 19.5 31.25 19.5H32.8125C35.3516 19.5 37.5 17.5469 37.5 14.8125V5.4375C37.5 2.89844 35.3516 0.75 32.8125 0.75H31.25C13.8672 0.75 0 14.8125 0 32V78.875C0 84.1484 4.10156 88.25 9.375 88.25H34.375C39.4531 88.25 43.75 84.1484 43.75 78.875V53.875C43.75 48.7969 39.4531 44.5 34.375 44.5Z"
+                                                fill="url(#paint0_linear)"></path>
+                                            <defs>
+                                                <linearGradient id="paint0_linear" x1="50" y1="-13" x2="50" y2="102"
+                                                    gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#34495E" stop-opacity="0.5"></stop>
+                                                    <stop offset="1" stop-color="#FFF2F5" stop-opacity="0"></stop>
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <p>Hi,I’m Hasan Bond and I am designer & developer who dream making the world better
+                                        place by products. I am also very active for international clients.</p>
+                                </div>
+                            </li>
+                            <li class="testimonial-carousel-inner-list-content">
+                                <div class="testimonial-carousel-inner-list-content-card">
+                                    <div class="testimonial-carousel-inner-list-content-card-inner">
+                                        <img src="imgs\content\home-selfie.jpg">
+                                        <div class="p-title">
+                                            <p class="p-name">Sound Cloud</p>
+                                            <p class="p-intro">Manager</p>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="89"
+                                            viewBox="0 0 100 89" fill="none" class="svg replaced-svg">
+                                            <path
+                                                d="M90.625 44.5H75V32C75 25.1641 80.4688 19.5 87.5 19.5H89.0625C91.6016 19.5 93.75 17.5469 93.75 14.8125V5.4375C93.75 2.89844 91.6016 0.75 89.0625 0.75H87.5C70.1172 0.75 56.25 14.8125 56.25 32V78.875C56.25 84.1484 60.3516 88.25 65.625 88.25H90.625C95.7031 88.25 100 84.1484 100 78.875V53.875C100 48.7969 95.7031 44.5 90.625 44.5ZM34.375 44.5H18.75V32C18.75 25.1641 24.2188 19.5 31.25 19.5H32.8125C35.3516 19.5 37.5 17.5469 37.5 14.8125V5.4375C37.5 2.89844 35.3516 0.75 32.8125 0.75H31.25C13.8672 0.75 0 14.8125 0 32V78.875C0 84.1484 4.10156 88.25 9.375 88.25H34.375C39.4531 88.25 43.75 84.1484 43.75 78.875V53.875C43.75 48.7969 39.4531 44.5 34.375 44.5Z"
+                                                fill="url(#paint0_linear)"></path>
+                                            <defs>
+                                                <linearGradient id="paint0_linear" x1="50" y1="-13" x2="50" y2="102"
+                                                    gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#34495E" stop-opacity="0.5"></stop>
+                                                    <stop offset="1" stop-color="#FFF2F5" stop-opacity="0"></stop>
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <p>Hi,I’m Hasan Bond and I am designer & developer who dream making the world better
+                                        place by products. I am also very active for international clients.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="testimonial-carousel-nav">
+                        <button class="dot-1"></button>
+                        <button class="dot-2"></button>
+                        <button class="dot-3"></button>
+                    </div>
+                </div>
+                <script>
+                    const dot1 = document.querySelector('.dot-1');
+                    const dot2 = document.querySelector('.dot-2');
+                    const dot3 = document.querySelector('.dot-3');
+                    const trackDot = document.querySelector('.testimonial-carousel-inner-list');
+                    const contarinerDotWidth = document.querySelector('.testimonial-carousel').offsetWidth;
+                    dot1.addEventListener('click', () => {
+                        trackDot.style.transform = 'translateX(0px)';
+                    })
+                    dot2.addEventListener('click', () => {
+                        trackDot.style.transform = 'translateX(-' + containerWidth / 2 + 'px)';
+                    })
+
+                    dot3.addEventListener('click', () => {
+                        trackDot.style.transform = 'translateX(-' + containerWidth + 'px)';//border distance
+                    })
+                </script>
+            </div>
+        </div>
+        <!-- blog -->
+        <div class="container-fluid">
+            <div class="blog-page" id="blog">
+                <h3>Blog</h3>
+                <p>Coming soon</p>
+            </div>
+        </div>
+        <!-- contact -->
+        <div class="container-fluid">
+            <div class="contact-page" id="contact">
+                <ul class="contact-page-container">
+                    <li class="contact-page-container-row-title">
+                        <h3>Contact</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Mauris ipsum sit nibh amet egestas tellus.</p>
+                    </li>
+                    <li class="contact-page-container-row">
+                        <div class="contact-page-container-col">
+                            <div class="card">
+                                <h3>Phone:</h3>
+                                <p>+452 666 386</p>
+                                <p>+465 562 226</p>
+                            </div>
+                            <div class="card">
+                                <h3>Email:</h3>
+                                <p>support@gmail.com</p>
+                                <p>example@support.com</p>
+                            </div>
+                            <div class="card">
+                                <h3>Address:</h3>
+                                <p>Maount View, Oval Road</p>
+                                <p>New York, USA</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="contact-page-container-row">
+                        <div class="contact-page-container-col">
+                            <div class="contact-input">
+                                <h3 class="bar">I'm always open to discussing product<span>design work or
+                                        partnerships.</span>
+                                </h3>
+                                <input class="bar" type="query" placeholder="Name*">
+                                <input class="bar" type="query" placeholder="Email*">
+                                <input class="bar" type="query" placeholder="Message*">
+                                <input class="submit-bar" type="submit" value="Submit">
+                            </div>
+                            <div class="position-map">
+                                <div id="map"></div>
+                                <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+                                <script
+                                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCO8yqjaAekCpapGPud204Q8e3d-Z4icro&callback=initMap&libraries=&v=weekly"
+                                    async>
+                                    </script>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
     </main>
 </body>
 

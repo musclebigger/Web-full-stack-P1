@@ -1,0 +1,33 @@
+.navbar-inverse {
+  background-color: #ebe9e9;
+}
+
+.navbar-inverse .navbar-brand {
+  font-size: 40px;
+}
+
+.navbar-inverse .navbar-brand p {
+  color: #030303;
+}
+
+.navbar-inverse .navbar-brand p span {
+  color: #4e50dd;
+}
+
+.navbar-nav {
+  border-radius: 2px;
+}
+
+.navbar-nav .nav-item {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 10px;
+}
+
+.navbar-inverse .navbar-nav > a:hover,
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  background-color: #adaaaa;
+}
+/*# sourceMappingURL=responsive.css.map */
