@@ -138,7 +138,7 @@ main {
   padding: 40px 55px;
 }
 
-.sideBar .author .inner .image {
+.sideBar .author .inner .image img {
   position: relative;
   width: 50px;
   height: 50px;
@@ -146,11 +146,11 @@ main {
   display: inline-block;
 }
 
-.sideBar .author .inner h3 {
+.sideBar .author .inner .image h3 {
   display: inline;
 }
 
-.sideBar .author .inner a {
+.sideBar .author .inner .image a {
   text-decoration: none;
   text-shadow: 0.5px 0.5px #6977f1;
   color: #6d93fa;
@@ -221,26 +221,26 @@ main {
 
 .web-context .home-page .content .social-media-frame .fa-facebook {
   text-shadow: 2px 2px #000000;
-  color: #c7c7c7;
-  border: 1px 1px #777;
+  color: #b9b9b9e8;
+  border: 1px 1px #fbfbfb;
 }
 
 .web-context .home-page .content .social-media-frame .fa-linkedin {
   text-shadow: 2px 2px #000000;
-  color: #c7c7c7;
-  border: 1px 1px #777;
+  color: #b9b9b9e8;
+  border: 1px 1px #979797;
 }
 
 .web-context .home-page .content .social-media-frame .fa-twitter {
   text-shadow: 2px 2px #000000;
-  color: #c7c7c7;
-  border: 1px 1px #777;
+  color: #b9b9b9e8;
+  border: 1px 1px #fbfbfb;
 }
 
 .web-context .home-page .content .social-media-frame .fa-instagram {
   text-shadow: 2px 2px #000000;
-  color: #c7c7c7;
-  border: 1px 1px #777;
+  color: #b9b9b9e8;
+  border: 1px 1px #fbfbfb;
 }
 
 .web-context .home-page .content .social-media-frame .fa:hover {
@@ -250,7 +250,7 @@ main {
 .web-context .home-page .content h3 {
   font-size: 60px;
   font-weight: bolder;
-  color: #1A1A1A;
+  color: #000000;
 }
 
 .web-context .home-page .content p {
@@ -259,26 +259,27 @@ main {
   line-height: 30px;
   letter-spacing: 0px;
   word-wrap: break-word;
-  color: #7e7e7e;
+  color: #777;
 }
 
 .web-context .home-page .content .frame {
   display: inline-block;
-  width: 260px;
-  height: 260px;
+  width: 300px;
+  height: 300px;
   border-radius: 100%;
   position: relative;
   margin-bottom: 27px;
-  background-color: #e2e2e2;
+  background-color: #dacfcfc9;
   border-radius: 100%;
 }
 
 .web-context .home-page .content .frame .image-content {
   display: inline-block;
-  max-width: 240px;
-  height: auto;
-  margin-top: 10px;
-  border-radius: 100%;
+  width: 265px;
+  height: 270px;
+  margin-top: 15px;
+  border-radius: 50%;
+  opacity: 0.9;
 }
 
 .web-context .about-page {
@@ -295,10 +296,11 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
+  background-color: #fffffffa;
 }
 
 .web-context .about-page h3 {
-  padding-left: 25px;
+  padding-left: 30px;
   font-size: 60px;
   font-weight: bolder;
   color: #1A1A1A;
@@ -417,12 +419,12 @@ main {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-left: 5px;
+  padding-left: 8%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 25px;
+  font-size: 3vh;
   color: #fff;
 }
 
@@ -473,6 +475,7 @@ main {
   font-size: 60px;
   font-weight: bolder;
   color: #1A1A1A;
+  padding-bottom: 60px;
 }
 
 .web-context .service-page .service-title p {
@@ -671,6 +674,7 @@ main {
   font-size: 60px;
   font-weight: bolder;
   color: #1A1A1A;
+  padding-bottom: 60px;
 }
 
 .web-context .portfolio-page .portfolio-title p {
@@ -746,6 +750,7 @@ main {
 
 .web-context .portfolio-page .carousel-inner .portfolio-carousel-inner .portfolio-list .portfolio-content .portfolio-inner-list .img-frame .portofolio-example {
   width: 100%;
+  height: 100%;
   border-radius: 20px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -831,6 +836,7 @@ main {
   font-size: 60px;
   font-weight: bolder;
   color: #1A1A1A;
+  padding-bottom: 60px;
 }
 
 .web-context .testimonial-page .testimonial-title p {
@@ -1033,7 +1039,7 @@ main {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  margin: 100px 40px 40px 40px;
+  margin: 40px 40px 40px 40px;
 }
 
 .web-context .contact-page .contact-page-container .contact-page-container-row-title {
@@ -1044,11 +1050,12 @@ main {
   font-size: 60px;
   font-weight: bolder;
   color: #1A1A1A;
+  padding-bottom: 60px;
 }
 
 .web-context .contact-page .contact-page-container .contact-page-container-row-title p {
   font-family: "Poppins";
-  font-size: 28px;
+  font-size: 18px;
   line-height: 30px;
   letter-spacing: 0px;
   word-wrap: break-word;
@@ -1088,7 +1095,12 @@ main {
   margin-left: 5px;
   display: inline-block;
   border-style: none;
-  border-radius: 2px;
+  border-radius: 4px;
+}
+
+.web-context .contact-page .contact-page-container .contact-page-container-row .contact-page-container-col .card h3, .web-context .contact-page .contact-page-container .contact-page-container-row .contact-page-container-col .card p {
+  padding-left: 20px;
+  padding-top: 10px;
 }
 
 .web-context .contact-page .contact-page-container .contact-page-container-row .contact-page-container-col .contact-input {

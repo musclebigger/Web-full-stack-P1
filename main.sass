@@ -86,17 +86,18 @@ main
             align-items: center
             padding: 40px 55px
             .image
-                position: relative
-                width: 50px
-                height: 50px
-                border-radius: 100%
-                display: inline-block
-            h3
-                display: inline //no default margin
-            a
-                text-decoration: none
-                text-shadow: 0.5px 0.5px #6977f1
-                color: #6d93fa
+                img
+                    position: relative
+                    width: 50px
+                    height: 50px
+                    border-radius: 100%
+                    display: inline-block
+                h3
+                    display: inline //no default margin
+                a
+                    text-decoration: none
+                    text-shadow: 0.5px 0.5px #6977f1
+                    color: #6d93fa
 
 .navbar
     display: none
@@ -111,25 +112,6 @@ main
 @media screen and (max-width: 810px)
     .top-content
         margin-right: 0px
-
-    // #nav-icon
-    //     position: fixed
-    //     width: 100%
-    //     background-color: #777
-    //     color: #ffffff
-    //     display: inline-block
-    //     padding-left: 5px
-    // #responsive
-    //     display: flex
-    //     flex-direction: row
-    //     width: 100%
-    //     .responsive-button
-    //         text-decoration: none
-    //         color: #616060
-    //         font-size: 14px
-    //         font-weight: 600
-    //         border-radius: 6px
-    //         border-style: 1px solid #777
 
     .sideBar
         display: none
@@ -166,55 +148,57 @@ main
 
                 .fa-facebook
                     text-shadow: 2px 2px #000000
-                    color: #c7c7c7
-                    border: 1px 1px #777
+                    color: #b9b9b9e8
+                    border: 1px 1px #fbfbfb
 
                 .fa-linkedin
                     text-shadow: 2px 2px #000000
-                    color: #c7c7c7
-                    border: 1px 1px #777
+                    color: #b9b9b9e8
+                    border: 1px 1px #979797
 
                 .fa-twitter
                     text-shadow: 2px 2px #000000
-                    color: #c7c7c7
-                    border: 1px 1px #777
+                    color: #b9b9b9e8
+                    border: 1px 1px #fbfbfb
 
                 .fa-instagram
                     text-shadow: 2px 2px #000000
-                    color: #c7c7c7
-                    border: 1px 1px #777
+                    color: #b9b9b9e8
+                    border: 1px 1px #fbfbfb
 
                 .fa:hover
                     opacity: 0.7
+                    
 
             h3
                 font-size: 60px
                 font-weight: bolder
-                color: #1A1A1A
+                color: #000000
             p
                 font-family: "Poppins"
                 font-size: 24px
                 line-height: 30px
                 letter-spacing: 0px
                 word-wrap: break-word
-                color: #7e7e7e
+                color: #777
 
             .frame
                 display: inline-block
-                width: 260px
-                height: 260px
+                width: 300px
+                height: 300px
                 border-radius: 100%
                 position: relative
                 margin-bottom: 27px
-                background-color: #e2e2e2
+                background-color: #dacfcfc9
                 border-radius: 100%
 
                 .image-content
                     display: inline-block
-                    max-width: 240px//width 100% change, 22 line change as well
-                    height: auto
-                    margin-top: 10px//move down 10px in order to center the image
-                    border-radius: 100%
+                    width: 265px//width 100% change, 22 line change as well
+                    height: 270px
+                    margin-top: 15px//move down 10px in order to center the image
+                    border-radius: 50%
+                    opacity: 0.9
     //about
     .about-page
         flex-grow: 1
@@ -223,8 +207,9 @@ main
         display: flex
         flex-direction: column
         min-height: 100vh
+        background-color: #fffffffa
         h3
-            padding-left: 25px
+            padding-left: 30px
             font-size: 60px
             font-weight: bolder
             color: #1A1A1A
@@ -306,9 +291,9 @@ main
                     h3
                         display: flex
                         flex-wrap: wrap
-                        padding-left: 5px
+                        padding-left: 8%
                         flex-direction: column
-                        font-size: 25px
+                        font-size: 3vh
                         color: #fff
                         span
                             font-size: 5px
@@ -342,6 +327,7 @@ main
                 font-size: 60px
                 font-weight: bolder
                 color: #1A1A1A
+                padding-bottom: 60px
             p
                 font-family: "Poppins"
                 font-size: 18px
@@ -467,6 +453,7 @@ main
                 font-size: 60px
                 font-weight: bolder
                 color: #1A1A1A
+                padding-bottom: 60px
             p
                 font-family: "Poppins"
                 font-size: 18px
@@ -519,6 +506,7 @@ main
                                 overflow: hidden
                                 .portofolio-example
                                     width: 100%
+                                    height: 100%
                                     border-radius: 20px
                                     transition: 0.3s
                                 .portofolio-example:hover
@@ -572,6 +560,7 @@ main
                 font-size: 60px
                 font-weight: bolder
                 color: #1A1A1A
+                padding-bottom: 60px
             p
                 font-family: "Poppins"
                 font-size: 18px
@@ -703,16 +692,17 @@ main
             flex-direction: column
             flex-grow: 1
             align-items: stretch
-            margin: 100px 40px 40px 40px
+            margin: 40px 40px 40px 40px
             .contact-page-container-row-title
                 word-wrap: break-word
                 h3
                     font-size: 60px
                     font-weight: bolder
                     color: #1A1A1A
+                    padding-bottom: 60px
                 p
                     font-family: "Poppins"
-                    font-size: 28px
+                    font-size: 18px
                     line-height: 30px
                     letter-spacing: 0px
                     word-wrap: break-word
@@ -734,7 +724,11 @@ main
                         margin-left: 5px
                         display: inline-block
                         border-style: none
-                        border-radius: 2px
+                        border-radius: 4px
+                        h3, p
+                            padding-left: 20px
+                            padding-top: 10px
+
 
                     .contact-input
                         flex: 1
