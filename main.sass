@@ -108,13 +108,11 @@ main
 
     .navbar
         display: block
-    
-@media screen and (max-width: 810px)
-    .top-content
-        margin-right: 0px
 
     .sideBar
         display: none
+    
+
 
 .web-context
 
@@ -208,6 +206,7 @@ main
         flex-direction: column
         min-height: 100vh
         background-color: #fffffffa
+        flex-wrap: wrap
         h3
             padding-left: 30px
             font-size: 60px
@@ -217,13 +216,13 @@ main
 
         .content
             display: flex
-            padding: 60px 60px 0px 0px
+            padding: 60px 40px 0px 0px
             flex-wrap: wrap
 
             .top-content
                 margin-top: 20px
-                width: 50vh
-                margin-right: 120px
+                width: 500px
+                margin-right: 6vw
 
                 .about-title
                     padding-left: 31px
@@ -266,13 +265,14 @@ main
             //change name to top 
             .bottom-content
                 margin-top: 20px
-                width: 50%
+                width: 35vw
                 display: flex
                 align-items: flex-end
                 flex-direction: row
                 overflow: visible
                 border-radius: 20px
                 justify-content: stretch
+                padding-left: 8vw
 
                 .experience
                     display: flex
@@ -291,18 +291,18 @@ main
                     h3
                         display: flex
                         flex-wrap: wrap
-                        padding-left: 8%
+                        padding-left: 1vw
                         flex-direction: column
                         font-size: 3vh
                         color: #fff
                         span
                             font-size: 5px
-                            padding-left: 35px
+                            padding-left: 1vw
                             color: #3021b8
 
                 img
-                    height: 100%
-                    width: 100%
+                    height: 90vh
+                    width: 30vw
                     margin-left: 60px
                     margin-bottom: 30px
                     border-radius: 10px
@@ -464,12 +464,14 @@ main
 
         .carousel-inner
             //carousel container
-            width: 94%
+            width: 76vw
             margin: 50px auto
             position: relative
             overflow: visible
             margin-left: 0px
+            mar-right: 1vh
             padding-left: 40px
+            margin-left: 1vh
 
             .portfolio-carousel-inner
                 overflow: hidden
@@ -487,7 +489,7 @@ main
                         //card-container
                         border-radius: 20px
                         width: 33.5% //calculate by carousel container, if it keeps three in screen, the 1280px is divided by 3
-                        height: 500px
+                        height: 60vh
                         flex-shrink: 0 //adjust the box that card won't shrink when the content is filled, it is going to be visiable
                         padding-right: 25px
                         box-sizing: border-box

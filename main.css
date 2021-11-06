@@ -167,12 +167,6 @@ main {
   .navbar {
     display: block;
   }
-}
-
-@media screen and (max-width: 810px) {
-  .top-content {
-    margin-right: 0px;
-  }
   .sideBar {
     display: none;
   }
@@ -297,6 +291,8 @@ main {
           flex-direction: column;
   min-height: 100vh;
   background-color: #fffffffa;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .web-context .about-page h3 {
@@ -311,15 +307,15 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 60px 60px 0px 0px;
+  padding: 60px 40px 0px 0px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 .web-context .about-page .content .top-content {
   margin-top: 20px;
-  width: 50vh;
-  margin-right: 120px;
+  width: 500px;
+  margin-right: 6vw;
 }
 
 .web-context .about-page .content .top-content .about-title {
@@ -374,7 +370,7 @@ main {
 
 .web-context .about-page .content .bottom-content {
   margin-top: 20px;
-  width: 50%;
+  width: 35vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -390,6 +386,7 @@ main {
   -webkit-box-pack: stretch;
       -ms-flex-pack: stretch;
           justify-content: stretch;
+  padding-left: 8vw;
 }
 
 .web-context .about-page .content .bottom-content .experience {
@@ -419,7 +416,7 @@ main {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-left: 8%;
+  padding-left: 1vw;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -430,13 +427,13 @@ main {
 
 .web-context .about-page .content .bottom-content .experience h3 span {
   font-size: 5px;
-  padding-left: 35px;
+  padding-left: 1vw;
   color: #3021b8;
 }
 
 .web-context .about-page .content .bottom-content img {
-  height: 100%;
-  width: 100%;
+  height: 90vh;
+  width: 30vw;
   margin-left: 60px;
   margin-bottom: 30px;
   border-radius: 10px;
@@ -687,12 +684,14 @@ main {
 }
 
 .web-context .portfolio-page .carousel-inner {
-  width: 94%;
+  width: 76vw;
   margin: 50px auto;
   position: relative;
   overflow: visible;
   margin-left: 0px;
+  mar-right: 1vh;
   padding-left: 40px;
+  margin-left: 1vh;
 }
 
 .web-context .portfolio-page .carousel-inner .portfolio-carousel-inner {
@@ -719,7 +718,7 @@ main {
 .web-context .portfolio-page .carousel-inner .portfolio-carousel-inner .portfolio-list .portfolio-content {
   border-radius: 20px;
   width: 33.5%;
-  height: 500px;
+  height: 60vh;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   padding-right: 25px;
