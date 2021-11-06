@@ -84,7 +84,7 @@ main
         .inner
             display: flex
             align-items: center
-            padding: 40px 55px
+            padding: 1vw 4vh
             .image
                 img
                     position: relative
@@ -101,18 +101,6 @@ main
 
 .navbar
     display: none
-
-@media screen and (max-width: 810px)
-    .web-context
-        margin-left: 0px
-
-    .navbar
-        display: block
-
-    .sideBar
-        display: none
-    
-
 
 .web-context
 
@@ -221,8 +209,7 @@ main
 
             .top-content
                 margin-top: 20px
-                width: 500px
-                margin-right: 6vw
+                width: 28vw
 
                 .about-title
                     padding-left: 31px
@@ -265,14 +252,15 @@ main
             //change name to top 
             .bottom-content
                 margin-top: 20px
-                width: 35vw
+                width: 40vw
+                height: 100vh
                 display: flex
                 align-items: flex-end
                 flex-direction: row
                 overflow: visible
                 border-radius: 20px
                 justify-content: stretch
-                padding-left: 8vw
+                padding-left: 4vw
 
                 .experience
                     display: flex
@@ -464,7 +452,7 @@ main
 
         .carousel-inner
             //carousel container
-            width: 76vw
+            width: 70vw
             margin: 50px auto
             position: relative
             overflow: visible
@@ -533,10 +521,10 @@ main
                 position: absolute
             .prev
                 left: 5px
-                bottom: 260px
+                bottom: 35vh
             .next
-                bottom: 260px
-                left: 97%
+                bottom: 35vh
+                left: 66vw
 
         .prev:hover
             background-color: #292929
@@ -573,9 +561,8 @@ main
 
         .testimonial-carousel
             //carousel container
-            width: 92%
+            width: 70vw
             margin: 50px auto
-            min-height: 200px
             position: relative
             overflow: visible
             margin-left: 35px
@@ -595,8 +582,7 @@ main
                     transition: transform 0.3s
                     .testimonial-carousel-inner-list-content
                         //card-container
-                        width: 51% //calculate by carousel container, if it keeps two in screen, the 1280px is divided by 2
-                        height: 350px
+                        width: 35vw //calculate by carousel container, if it keeps two in screen, the 1280px is divided by 2
                         flex-shrink: 0 //adjust the box that card won't shrink when the content is filled, it is going to be visiable
                         padding-right: 30px
                         box-sizing: border-box
@@ -623,7 +609,7 @@ main
                                 .p-title
                                     display: flex
                                     flex-direction: column
-                                    margin-left: 30px
+                                    margin-left: 3px
                                     margin-top: 40px
                                     .p-name
                                         font-size: 20px
@@ -634,8 +620,8 @@ main
                                         color: #7e7e7e
                                         margin-top: 2px
                                 svg
-                                    margin-left: 160px
-                                    margin-top: 80px
+                                    margin-left: 16px
+                                    margin-top: 60px
                             p
                                 margin-top: 30px
                                 word-wrap: break-word

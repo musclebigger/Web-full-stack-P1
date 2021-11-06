@@ -135,7 +135,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 40px 55px;
+  padding: 1vw 4vh;
 }
 
 .sideBar .author .inner .image img {
@@ -158,18 +158,6 @@ main {
 
 .navbar {
   display: none;
-}
-
-@media screen and (max-width: 810px) {
-  .web-context {
-    margin-left: 0px;
-  }
-  .navbar {
-    display: block;
-  }
-  .sideBar {
-    display: none;
-  }
 }
 
 .web-context .home-page {
@@ -314,8 +302,7 @@ main {
 
 .web-context .about-page .content .top-content {
   margin-top: 20px;
-  width: 500px;
-  margin-right: 6vw;
+  width: 28vw;
 }
 
 .web-context .about-page .content .top-content .about-title {
@@ -370,7 +357,8 @@ main {
 
 .web-context .about-page .content .bottom-content {
   margin-top: 20px;
-  width: 35vw;
+  width: 40vw;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -386,7 +374,7 @@ main {
   -webkit-box-pack: stretch;
       -ms-flex-pack: stretch;
           justify-content: stretch;
-  padding-left: 8vw;
+  padding-left: 4vw;
 }
 
 .web-context .about-page .content .bottom-content .experience {
@@ -684,7 +672,7 @@ main {
 }
 
 .web-context .portfolio-page .carousel-inner {
-  width: 76vw;
+  width: 70vw;
   margin: 50px auto;
   position: relative;
   overflow: visible;
@@ -787,12 +775,12 @@ main {
 
 .web-context .portfolio-page .carousel-nav .prev {
   left: 5px;
-  bottom: 260px;
+  bottom: 35vh;
 }
 
 .web-context .portfolio-page .carousel-nav .next {
-  bottom: 260px;
-  left: 97%;
+  bottom: 35vh;
+  left: 66vw;
 }
 
 .web-context .portfolio-page .prev:hover {
@@ -848,9 +836,8 @@ main {
 }
 
 .web-context .testimonial-page .testimonial-carousel {
-  width: 92%;
+  width: 70vw;
   margin: 50px auto;
-  min-height: 200px;
   position: relative;
   overflow: visible;
   margin-left: 35px;
@@ -879,8 +866,7 @@ main {
 }
 
 .web-context .testimonial-page .testimonial-carousel .testimonial-carousel-inner .testimonial-carousel-inner-list .testimonial-carousel-inner-list-content {
-  width: 51%;
-  height: 350px;
+  width: 35vw;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   padding-right: 30px;
@@ -929,7 +915,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 30px;
+  margin-left: 3px;
   margin-top: 40px;
 }
 
@@ -946,8 +932,8 @@ main {
 }
 
 .web-context .testimonial-page .testimonial-carousel .testimonial-carousel-inner .testimonial-carousel-inner-list .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card .testimonial-carousel-inner-list-content-card-inner svg {
-  margin-left: 160px;
-  margin-top: 80px;
+  margin-left: 16px;
+  margin-top: 60px;
 }
 
 .web-context .testimonial-page .testimonial-carousel .testimonial-carousel-inner .testimonial-carousel-inner-list .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card p {

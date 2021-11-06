@@ -30,4 +30,59 @@
 .navbar-inverse .navbar-nav > li > a:focus {
   background-color: #adaaaa;
 }
+
+@media screen and (max-width: 810px) {
+  .web-context {
+    margin-left: 0px;
+  }
+  .web-context .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .web-context .content .top-content {
+    width: 80vw !important;
+  }
+  .web-context .content .bottom-content {
+    width: 80vw !important;
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important;
+    height: 60vh !important;
+  }
+  .web-context .content .bottom-content img {
+    height: 60vh !important;
+    width: 50vw !important;
+  }
+  .web-context .service-page .service-title {
+    margin-right: 20vw !important;
+  }
+  .web-context .portfolio-page .portfolio-title {
+    margin-right: 20vw !important;
+  }
+  .web-context .portfolio-page .carousel-inner {
+    width: 85vw !important;
+    height: 20vh !important;
+  }
+  .web-context .portfolio-page .carousel-inner .portfolio-inner-list p {
+    font-size: 0px !important;
+  }
+  .web-context .portfolio-page .carousel-nav .prev {
+    bottom: 5vh !important;
+  }
+  .web-context .portfolio-page .carousel-nav .next {
+    bottom: 5vh !important;
+    left: 76vw !important;
+  }
+  .web-context .testimonial-page .testimonial-title {
+    margin-right: 20vw !important;
+  }
+  .navbar {
+    display: block;
+  }
+  .sideBar {
+    display: none;
+  }
+}
 /*# sourceMappingURL=responsive.css.map */
