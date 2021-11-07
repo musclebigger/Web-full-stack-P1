@@ -262,6 +262,8 @@ main {
   margin-top: 15px;
   border-radius: 50%;
   opacity: 0.9;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .web-context .about-page {
