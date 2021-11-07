@@ -1,21 +1,30 @@
 
+
+
 .navbar-inverse
     background-color: #ebe9e9
-    .navbar-brand
-        font-size: 40px
+    padding: 0px
+    .container-fluid
+        padding: 0px
+        .navbar-brand
+            font-size: 24px
+            padding: 16px 13px 0px 10px
+            margin: 0px
+            border-style: none solid none none
+            p
+                color: #030303
+                span
+                    color: #4e50dd
+                    text-decoration: underline
+        #navbarNav
+            .navbar-nav
+                height: 62px
+                align-items: center
+                .nav-item
+                    text-transform: uppercase
+                    letter-spacing: 3px
+                    font-size: 10px
 
-        p
-            color: #030303
-            span
-                color: #4e50dd
-
-.navbar-nav
-    border-radius: 2px
-    .nav-item
-        color: #ffffff
-        text-transform: uppercase
-        letter-spacing: 3px
-        font-size: 10px
     
 
 .navbar-inverse .navbar-nav>a:hover,
@@ -50,6 +59,8 @@
                 .portfolio-inner-list
                     p
                         font-size: 0px !important
+                    h3
+                        font-size: 2px !important
 
             .carousel-nav
                 .prev
@@ -60,9 +71,52 @@
         .testimonial-page
             .testimonial-title
                 margin-right: 20vw !important
-            .testimonial-carousel-inner
-                .testimonial-carousel-inner-list-content-card
-                    
+            .testimonial-carousel
+                width: 80vw !important
+                .testimonial-carousel-inner-list-content
+                    width: 40vw !important
+                    .testimonial-carousel-inner-list-content-card
+                        padding-right: 0px !important
+                        .testimonial-carousel-inner-list-content-card-inner
+                            flex-direction: column !important
+                            .p-title
+                                margin-top: 0px !important
+                                .p-intro
+                                    margin-bottom: 0px !important
+                                    font-weight: bold
+                                    margin-right: 6px
+                            svg
+                                display: none
+                        p
+                            margin-top: 10px !important
+                            font-size: 5px !important
+        .contact-page
+            padding: 60px 0px 20px 0px !important
+            height: 120vh !important
+            .contact-page-container 
+                h3
+                    padding-bottom: 20px  !important
+                .contact-page-container-row
+                    margin-top: 10px !important
+                    .card
+                        justify-content: center
+                        margin-left: 0px !important
+                        h3
+                            font-size: 6px !important
+                            font-weight: bold
+                            padding: 5px 0px 0px 10px !important
+                        p
+                            font-size: 2px !important 
+                            padding: 5px 0px 0px 10px !important
+                            margin: 0px !important
+                    .contact-input
+                        margin-top: 20px !important
+                        .bar
+                            padding-bottom: 10px !important
+                            font-size: 24px
+                                
+                    .position-map
+                        display: none
     .navbar
         display: block
 

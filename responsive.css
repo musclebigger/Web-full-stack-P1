@@ -1,25 +1,36 @@
 .navbar-inverse {
   background-color: #ebe9e9;
+  padding: 0px;
 }
 
-.navbar-inverse .navbar-brand {
-  font-size: 40px;
+.navbar-inverse .container-fluid {
+  padding: 0px;
 }
 
-.navbar-inverse .navbar-brand p {
+.navbar-inverse .container-fluid .navbar-brand {
+  font-size: 24px;
+  padding: 16px 13px 0px 10px;
+  margin: 0px;
+  border-style: none solid none none;
+}
+
+.navbar-inverse .container-fluid .navbar-brand p {
   color: #030303;
 }
 
-.navbar-inverse .navbar-brand p span {
+.navbar-inverse .container-fluid .navbar-brand p span {
   color: #4e50dd;
+  text-decoration: underline;
 }
 
-.navbar-nav {
-  border-radius: 2px;
+.navbar-inverse .container-fluid #navbarNav .navbar-nav {
+  height: 62px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.navbar-nav .nav-item {
-  color: #ffffff;
+.navbar-inverse .container-fluid #navbarNav .navbar-nav .nav-item {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 10px;
@@ -68,6 +79,9 @@
   .web-context .portfolio-page .carousel-inner .portfolio-inner-list p {
     font-size: 0px !important;
   }
+  .web-context .portfolio-page .carousel-inner .portfolio-inner-list h3 {
+    font-size: 2px !important;
+  }
   .web-context .portfolio-page .carousel-nav .prev {
     bottom: 5vh !important;
   }
@@ -77,6 +91,72 @@
   }
   .web-context .testimonial-page .testimonial-title {
     margin-right: 20vw !important;
+  }
+  .web-context .testimonial-page .testimonial-carousel {
+    width: 80vw !important;
+  }
+  .web-context .testimonial-page .testimonial-carousel .testimonial-carousel-inner-list-content {
+    width: 40vw !important;
+  }
+  .web-context .testimonial-page .testimonial-carousel .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card {
+    padding-right: 0px !important;
+  }
+  .web-context .testimonial-page .testimonial-carousel .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card .testimonial-carousel-inner-list-content-card-inner {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .web-context .testimonial-page .testimonial-carousel .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card .testimonial-carousel-inner-list-content-card-inner .p-title {
+    margin-top: 0px !important;
+  }
+  .web-context .testimonial-page .testimonial-carousel .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card .testimonial-carousel-inner-list-content-card-inner .p-title .p-intro {
+    margin-bottom: 0px !important;
+    font-weight: bold;
+    margin-right: 6px;
+  }
+  .web-context .testimonial-page .testimonial-carousel .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card .testimonial-carousel-inner-list-content-card-inner svg {
+    display: none;
+  }
+  .web-context .testimonial-page .testimonial-carousel .testimonial-carousel-inner-list-content .testimonial-carousel-inner-list-content-card p {
+    margin-top: 10px !important;
+    font-size: 5px !important;
+  }
+  .web-context .contact-page {
+    padding: 60px 0px 20px 0px !important;
+    height: 120vh !important;
+  }
+  .web-context .contact-page .contact-page-container h3 {
+    padding-bottom: 20px  !important;
+  }
+  .web-context .contact-page .contact-page-container .contact-page-container-row {
+    margin-top: 10px !important;
+  }
+  .web-context .contact-page .contact-page-container .contact-page-container-row .card {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 0px !important;
+  }
+  .web-context .contact-page .contact-page-container .contact-page-container-row .card h3 {
+    font-size: 6px !important;
+    font-weight: bold;
+    padding: 5px 0px 0px 10px !important;
+  }
+  .web-context .contact-page .contact-page-container .contact-page-container-row .card p {
+    font-size: 2px !important;
+    padding: 5px 0px 0px 10px !important;
+    margin: 0px !important;
+  }
+  .web-context .contact-page .contact-page-container .contact-page-container-row .contact-input {
+    margin-top: 20px !important;
+  }
+  .web-context .contact-page .contact-page-container .contact-page-container-row .contact-input .bar {
+    padding-bottom: 10px !important;
+    font-size: 24px;
+  }
+  .web-context .contact-page .contact-page-container .contact-page-container-row .position-map {
+    display: none;
   }
   .navbar {
     display: block;
