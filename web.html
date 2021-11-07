@@ -566,13 +566,14 @@
                     </li>
                     <li class="contact-page-container-row">
                         <div class="contact-page-container-col">
-                            <div class="contact-input">
+                            <form id="my-form" action="https://formspree.io/f/mayagarb" method="POST" class="contact-input">
                                 <h3 class="bar">I'm always open to discussing products</h3>
-                                <input class="bar" type="query" placeholder="Name*">
-                                <input class="bar" type="query" placeholder="Email*">
-                                <input class="bar" type="query" placeholder="Message*">
-                                <input class="submit-bar" type="submit" value="Submit">
-                            </div>
+                                <input class="bar" type="text" name="message" placeholder="Name*">
+                                <input type="email" name="email" class="bar" placeholder="Email*">
+                                <input class="bar" type="text" name="message" placeholder="Message*">
+                                <input id="my-form-button" class="submit-bar" type="submit" value="Submit">
+                                <p id="my-form-status"></p>
+                            </form>
                             <div class="position-map">
                                 <div id="map"></div>
                                 <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
@@ -586,7 +587,29 @@
                 </ul>
             </div>
         </div>
-
+          <!-- Place this script at the end of the body tag -->
+          <script>
+              var form = document.getElementById("my-form");
+              
+              async function handleSubmit(event) {
+                event.preventDefault();
+                var status = document.getElementById("my-form-status");
+                var data = new FormData(event.target);
+                fetch(event.target.action, {
+                  method: form.method,
+                  body: data,
+                  headers: {
+                      'Accept': 'application/json'
+                  }
+                }).then(response => {
+                  status.innerHTML = "Thanks for your submission!";
+                  form.reset()
+                }).catch(error => {
+                  status.innerHTML = "Oops! There was a problem submitting your form"
+                });
+              }
+              form.addEventListener("submit", handleSubmit)
+          </script>
 
 
     </main>
