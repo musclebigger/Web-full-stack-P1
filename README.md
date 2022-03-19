@@ -1,11 +1,40 @@
-# webpack 使用指南（webpack.config.js）
-    webpack 5 core concept:
-        1. Entry: 入口文件 （从哪里读入）
-        2. Output：出口文件 （bundle的文件写入哪里）
-        3. Loader: webpack只能读写js文件/json文件，对于css或者img需要loader进行翻译
-        4. Plugins：外部插件，例如jQuery，Bootstrap4, 图片压缩 等
-        5. Mode: 使用者模式，两种，production和development，production会多一个压缩函数在buit.js中
+
+- [1. Javascript模块化规范](#1-javascript模块化规范)
+  - [1.1. 前端引入模块化的原因与进程](#11-前端引入模块化的原因与进程)
+- [2. Webpack使用指南](#2-webpack使用指南)
+  - [2.1. webpack 5 core concept:](#21-webpack-5-core-concept)
+  - [2.2. webpack 引入打包好的文件方式：](#22-webpack-引入打包好的文件方式)
+
+## 1. Javascript模块化规范
+当前js三大模块化规范：commonJS(node.js依赖与commonJS规范)、AMD、ES6
+
+### 1.1. 前端引入模块化的原因与进程
+- 远古时期：js文件堆在一个放入html文件，文件内部的高耦合和高复杂度导致极低的可维护性以及可读性。也就是说，当需求不断的迭代，越来越多
+的代码被添加入一个js文件里。当打到一定量级，比如10万行代码的文件，对于代码维护和功能更新的developer来讲，查找一行代码都是耗时的。
+
+- 简易封装：由于远古模式的痛点，聪明的程序猿们将一个js文件拆分成不同js文件（namespace模式），初步解决了结构上的高耦合。But, 简易的
+封装在调用时会产生变量污染。由于js原始态没有封装的概念，当一个js文件调用另一个js文件的function时传参，会使这个另一个js文件的function的
+内部变量变为传入的参数。这个问题对于全局变量更为突出。
+
+- IIFE的出现: 于是IIFE出现了，IIFE是闭包的,长这样(func)(moduel)。通过IIFE这种闭包模式，使用依赖注入的方法解决了变量污染的问题。所以IIFE是
+所有模块化规范的基石。
+
+## 2. Webpack使用指南
+官方指南: https://webpack.docschina.org/guides/
+
+- wepack关键依赖: 
+    ```
+        npm install webpack webpack-cli --save-dev
+    ```
+
+### 2.1. webpack 5 core concept:
+- Entry: 入口文件 （从哪里读入）
+- Output：出口文件 （bundle的文件写入哪里）
+- Loader: webpack只能读写js文件/json文件，对于css或者img需要loader进行翻译(less配置)
+- Plugins：外部插件，例如jQuery，Bootstrap4, 图片压缩 等
+- Mode: 使用者模式，两种，production和development，production会多一个压缩函数在buit.js中，是webpack内置的模式
+
     
-    webpack 引入打包好的文件方式：
-        在build文件夹下的html引入打包好的script文件,当前是是built.js，
-        检查是否已经引入通过检查打包好的script文件,当前是是built.js，中的底部查看
+### 2.2. webpack 引入打包好的文件方式：
+- 在build文件夹下的html引入打包好的script文件,当前是是built.js，
+- 检查是否已经引入通过检查打包好的script文件,当前是是built.js，中的底部查看
