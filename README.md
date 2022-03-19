@@ -1,6 +1,7 @@
 
 - [1. Javascript模块化规范](#1-javascript模块化规范)
   - [1.1. 前端引入模块化的原因与进程](#11-前端引入模块化的原因与进程)
+  - [commonJS](#commonjs)
 - [2. Webpack使用指南](#2-webpack使用指南)
   - [2.1. webpack 5 core concept:](#21-webpack-5-core-concept)
   - [2.2. webpack 引入打包好的文件方式：](#22-webpack-引入打包好的文件方式)
@@ -27,6 +28,15 @@
     })(window) //jQury依赖于window的操作，window才是我们上面函数的实际调用的参数
     ```
 - 模块规范化：虽然IIFE解决了变量污染的问题，但是如果没有规范的话，当我们有很多js文件时，我们一个html文件会引入大量的js。因此规范化是最终解耦的关键。
+
+### commonJS
+- 特点：每个文件都是视作一个模块，服务器端所有模块都是同步加载，浏览器端需要提前打包处理。由于浏览器端需要打包，commonJS规范不适用于前端，因为如果某一个js文件打包失败都会导致404。
+- 基本语法：
+  - i. 暴露模块：module.exports = value / exports.xxx = value, 不同点在于多暴露时的方式不一样，前者要把多暴露包装成一个暴露而后者可以直接通过命名进行多暴露;
+  - ii. 引入模块：require(xxx)
+- 实现：
+  - i. 服务器端: node.js方式
+  - ii. 浏览器端: Browserify
 
 ## 2. Webpack使用指南
 官方指南: https://webpack.docschina.org/guides/
