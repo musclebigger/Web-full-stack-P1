@@ -24,10 +24,10 @@
     //w作为window的形参，注入进当前IIFE
     (function(w){
         function foo( name ){
-            document.getElementById( name )
+            console.log( name )
         };
-        w.$ = {foo}; //外部使$调用foo函数拿到对应id的值，比如$('root')
-    })(window) //jQury依赖于window的操作，window才是我们上面函数的实际调用的参数
+        w.$ = {foo}; //将$绑定到window上，外部使$调用foo函数，window.$.foo('name')
+    })(window) //这里依赖于window绑定参数，window才是我们上面函数的实际调用的参数
     ```
 - 模块规范化：虽然IIFE解决了变量污染的问题，但是如果没有规范的话，当我们有很多js文件时，我们一个html文件会引入大量的js。因此规范化是最终解耦的关键。
 
