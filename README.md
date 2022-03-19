@@ -16,8 +16,17 @@
 封装在调用时会产生变量污染。由于js原始态没有封装的概念，当一个js文件调用另一个js文件的function时传参，会使这个另一个js文件的function的
 内部变量变为传入的参数。这个问题对于全局变量更为突出。
 
-- IIFE的出现: 于是IIFE出现了，IIFE是闭包的,长这样(func)(moduel)。通过IIFE这种闭包模式，使用依赖注入的方法解决了变量污染的问题。所以IIFE是
-所有模块化规范的基石。
+- IIFE的出现: 于是IIFE出现了，IIFE是闭包的,长这样(func(moduel){export})(moduel)。通过IIFE这种闭包模式，使用依赖注入的方法解决了变量污染的问题。所以IIFE是所有模块化规范的基石。IIFE第一个括号是通过函数的方式将变量封装，然后再添加需要暴露的export。第二个括号是暴露的moduel调用方式。这里用jqury的封装模式作为例子。注释：依赖注入就是将第二个括号作为实参，第一个括号function的参数作为形式参数。
+    ```
+    //w作为参数是需的，作为window的形参，注入进当前IIFE
+    (function(w))({
+        function foo( name ){
+            document.getElementById( name )
+        };
+        w.$ = {foo}; //外部使$调用foo函数拿到对应id的值，比如$('root')
+    })(window) //jQury依赖于window的操作，window才是我们上面函数的实际调用的参数
+    ```
+- 模块规范化：虽然IIFE解决了变量污染的问题，但是如果没有规范的话，当我们有很多js文件时，我们一个html文件会引入大量的js。因此规范化是最终解耦的关键。
 
 ## 2. Webpack使用指南
 官方指南: https://webpack.docschina.org/guides/
