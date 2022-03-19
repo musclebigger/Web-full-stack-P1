@@ -22,7 +22,7 @@
 - IIFE的出现: 于是IIFE出现了，IIFE是闭包的,长这样(func(moduel){export})(moduel)。通过IIFE这种闭包模式，使用依赖注入的方法解决了变量污染的问题。所以IIFE是所有模块化规范的基石。IIFE第一个括号是通过函数的方式将变量封装，然后再添加需要暴露的export。第二个括号是暴露的moduel调用方式。这里用jqury的封装模式作为例子。注释：依赖注入就是将第二个括号作为实参，第一个括号function的参数作为形式参数。
     ```
     //w作为window的形参，注入进当前IIFE
-    (function(w))({
+    (function(w)){
         function foo( name ){
             document.getElementById( name )
         };
